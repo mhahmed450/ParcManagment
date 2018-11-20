@@ -5,9 +5,9 @@
  */
 package com.ensi.ilsi.ParcManagement.Web;
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
+
 import com.ensi.ilsi.ParcManagement.Entity.Intervention;
-import com.ensi.ilsi.ParcManagement.Service.EquipementService;
+
 import com.ensi.ilsi.ParcManagement.Service.InterventionService;
 import java.util.Date;
 import java.util.List;
@@ -40,21 +40,21 @@ public class InterventionRessource {
     public List<Intervention> findAll(){
         return this.interventionService.findAll();   }
     
-    @GetMapping("/intervention/{id}")
-    public Optional<Intervention> getIntervention(@PathParam("id") Long  id){
+    @GetMapping("/{id}")
+    public Optional<Intervention> getIntervention(@PathVariable("id") Long  id){
         return this.interventionService.findById(id);
     }
-     @GetMapping("/intervention/{date}")
-    public Optional<Intervention> getInterventionByDate(@PathParam("date") Date date){
+     @GetMapping("/{date}")
+    public Optional<Intervention> getInterventionByDate(@PathVariable("date") Date date){
         return this.interventionService.findByDate(date);
     }
     
-      @GetMapping("/intervention/{panne}")
-    public Optional<Intervention> getInterventionByPanne(@PathParam("panne") String panne){
+      @GetMapping("/{panne}")
+    public Optional<Intervention> getInterventionByPanne(@PathVariable("panne") String panne){
         return this.interventionService.findByPanne(panne);
     }
-    @PostMapping("/intervention/{intervention}")
-    public Intervention createIntervention(@PathParam("intervention") Intervention intervention){
+    @PostMapping("/{intervention}")
+    public Intervention createIntervention(@PathVariable("intervention") Intervention intervention){
         return this.interventionService.create(intervention);
     }
     

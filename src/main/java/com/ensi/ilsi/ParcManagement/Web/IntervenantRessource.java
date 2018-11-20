@@ -38,13 +38,13 @@ public class IntervenantRessource {
     public List<Intervenant> findAll(){
         return this.intervenantService.findAll();   }
     
-    @GetMapping("/intervenant/{id}")
-    public Optional<Intervenant> getIntervenant(@PathParam("id") Long  id){
+    @GetMapping("/{id}")
+    public Optional<Intervenant> getIntervenant(@PathVariable("id") Long  id){
         return this.intervenantService.findById(id);
     }
     
-    @PostMapping("/intervenant/{intervenant}")
-    public Intervenant addIntervenant(@PathParam("intervenant") Intervenant intervenant){
+    @PostMapping("/{intervenant}")
+    public Intervenant addIntervenant(@PathVariable("intervenant") Intervenant intervenant){
         return this.intervenantService.create(intervenant);
     }
     

@@ -35,13 +35,13 @@ public class UserRessource {
     public List<User> findAll(){
         return this.userService.findAll();   }
     
-    @GetMapping("/user/{id}")
-    public Optional<User> getUser(@PathParam("id") Long  id){
+    @GetMapping("/{id}")
+    public Optional<User> getUser(@PathVariable("id") Long  id){
         return this.userService.findById(id);
     }
     
-    @PostMapping("/user/{user}")
-    public User addUser(@PathParam("user") User user){
+    @PostMapping("/{user}")
+    public User addUser(@PathVariable("user") User user){
         return this.userService.create(user);
     }
     

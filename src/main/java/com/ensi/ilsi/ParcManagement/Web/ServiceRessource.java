@@ -5,9 +5,9 @@
  */
 package com.ensi.ilsi.ParcManagement.Web;
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
+
 import com.ensi.ilsi.ParcManagement.Entity.Service;
-import com.ensi.ilsi.ParcManagement.Service.IntervenantService;
+
 import com.ensi.ilsi.ParcManagement.Service.ServiceService;
 import java.util.List;
 import java.util.Optional;
@@ -36,13 +36,13 @@ public class ServiceRessource {
     public List<Service> findAll(){
         return this.serviceService.findAll();   }
     
-    @GetMapping("/service/{id}")
-    public Optional<Service> getService(@PathParam("id") Long  id){
+    @GetMapping("/{id}")
+    public Optional<Service> getService(@PathVariable("id") Long  id){
         return this.serviceService.findById(id);
     }
     
-    @PostMapping("/service/{service}")
-    public Service addService(@PathParam("service") Service service){
+    @PostMapping("/{service}")
+    public Service addService(@PathVariable("service") Service service){
         return this.serviceService.create(service);
     }
     

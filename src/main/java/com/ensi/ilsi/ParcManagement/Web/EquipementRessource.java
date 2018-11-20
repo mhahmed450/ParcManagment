@@ -37,13 +37,13 @@ public class EquipementRessource {
     public List<Equipement> findAll(){
         return this.equipementService.findAll();   }
     
-    @GetMapping("/equipement/{id}")
-    public Optional<Equipement> getEquipement(@PathParam("id") Long  id){
+    @GetMapping("/{id}")
+    public Optional<Equipement> getEquipement(@PathVariable("id") Long  id){
         return this.equipementService.findById(id);
     }
     
-    @PostMapping("/equipement/{name}")
-    public Equipement createEquipement(@PathParam("name") String name){
+    @PostMapping("/{name}")
+    public Equipement createEquipement(@PathVariable("name") String name){
         return this.equipementService.create(name);
     }
     

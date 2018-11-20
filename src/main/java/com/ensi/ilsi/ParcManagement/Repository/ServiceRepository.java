@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.Repository;
 
-import com.ensi.ilsi.ParcManagement.Entity.Office;
+
 import com.ensi.ilsi.ParcManagement.Entity.Service;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
