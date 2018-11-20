@@ -21,7 +21,7 @@ import javax.persistence.OneToMany;
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long RegNumSt;
+    private Long Id;
     private String name;
     private String Email;
     private Long Phone;
@@ -53,9 +53,7 @@ public class User  {
 
     
     
-    public Long getRegNumSt() {
-        return RegNumSt;
-    }
+
 
     public String getName() {
         return name;
@@ -69,10 +67,7 @@ public class User  {
         return Phone;
     }
 
-    public void setRegNumSt(Long RegNumSt) {
-        this.RegNumSt = RegNumSt;
-    }
-
+    
     public void setName(String name) {
         this.name = name;
     }

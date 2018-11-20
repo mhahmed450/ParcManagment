@@ -7,6 +7,7 @@ package com.ensi.ilsi.ParcManagement.Repository;
 
 import com.ensi.ilsi.ParcManagement.Entity.Service;
 import com.ensi.ilsi.ParcManagement.Entity.User;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,6 +17,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface UserRepository extends JpaRepository <User,Long> {
-   //User findByRegNumStUser(int id);
+    Optional<User> findById(Long id);
+    
     
 }

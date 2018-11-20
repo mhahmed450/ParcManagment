@@ -8,6 +8,7 @@ package com.ensi.ilsi.ParcManagement.Repository;
 import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
 import com.ensi.ilsi.ParcManagement.Entity.Intervention;
 import com.ensi.ilsi.ParcManagement.Entity.Office;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,6 +18,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface OfficeRepository extends JpaRepository <Office,Long> {
-    //Office findByOfficeNumberOffice(int id) ;
+    Optional<Office> findById(Long id) ;
     
 }

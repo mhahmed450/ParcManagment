@@ -19,7 +19,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InterventionRepository extends JpaRepository <Intervention,Long> {
-   // Optional<Intervention> findBynumIntervention(Long id) ;
+   Optional<Intervention> findById(Long id) ;
      
          Optional<Intervention> findByDate(Date d);
     
