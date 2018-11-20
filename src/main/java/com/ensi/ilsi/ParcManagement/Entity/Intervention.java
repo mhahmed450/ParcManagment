@@ -33,14 +33,18 @@ public class Intervention extends AbstractEntity {
     private Intervenant intervenant ;
 
     public Intervention() {
+        //intervention 
     }
 
-    public Intervention(Long numIntervention, String panne, Date date, Equipement equipement) {
+    public Intervention(Long numIntervention, String panne, Date date, Equipement equipement, Intervenant intervenant) {
         this.numIntervention = numIntervention;
         this.panne = panne;
         this.date = date;
         this.equipement = equipement;
+        this.intervenant = intervenant;
     }
+
+    
 
     public Intervenant getIntervenant() {
         return intervenant;

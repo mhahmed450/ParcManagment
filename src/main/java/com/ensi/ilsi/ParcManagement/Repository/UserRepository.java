@@ -6,7 +6,7 @@
 package com.ensi.ilsi.ParcManagement.Repository;
 
 import com.ensi.ilsi.ParcManagement.Entity.Service;
-import com.ensi.ilsi.ParcManagement.Entity.Stuff;
+import com.ensi.ilsi.ParcManagement.Entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
  * @author Administrator
  */
 @Repository
-public interface StuffRepository extends JpaRepository <Stuff,Long> {
-   Stuff findByRegNumSt(int id) ;
+public interface UserRepository extends JpaRepository <User,Long> {
+   User findByRegNumSt(int id);
     
 }

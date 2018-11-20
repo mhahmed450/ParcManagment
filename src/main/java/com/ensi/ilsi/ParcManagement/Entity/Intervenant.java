@@ -30,7 +30,22 @@ public class Intervenant extends AbstractEntity {
     
     @OneToMany
     private Set<Intervention> intervensions ;
+    
+    
+    public Intervenant() {
+        //Intervenant
+    }
+    
 
+    public Intervenant(Long RegNumInt, String name, String Email, Long Phone, Set<Intervention> intervensions) {
+        this.RegNumInt = RegNumInt;
+        this.name = name;
+        this.Email = Email;
+        this.Phone = Phone;
+        this.intervensions = intervensions;
+    }
+
+    
     public Set<Intervention> getIntervensions() {
         return intervensions;
     }
@@ -110,7 +125,6 @@ public class Intervenant extends AbstractEntity {
         this.Phone = Phone;
     }
 
-    public Intervenant() {
-    }
+    
     
 }

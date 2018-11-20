@@ -32,12 +32,17 @@ public class Office extends AbstractEntity {
     @ManyToOne
     private Service service ;
     public Office() {
+        //office
     }
 
-    public Office(Long OfficeNumber, String name) {
+    public Office(Long OfficeNumber, String name, Set<Equipement> equipements, Service service) {
         this.OfficeNumber = OfficeNumber;
         this.name = name;
+        this.equipements = equipements;
+        this.service = service;
     }
+
+    
 
     public Service getService() {
         return service;

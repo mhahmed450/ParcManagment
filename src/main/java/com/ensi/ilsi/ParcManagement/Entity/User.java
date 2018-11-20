@@ -30,15 +30,29 @@ public class User extends AbstractEntity {
     private Set<Equipement> equipements;
 
     public User() {
+        //User
     }
 
-    public User(Long RegNumSt, String name, String Email, Long Phone) {
+    public User(Long RegNumSt, String name, String Email, Long Phone, Set<Equipement> equipements) {
         this.RegNumSt = RegNumSt;
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;
+        this.equipements = equipements;
     }
 
+    
+
+    public Set<Equipement> getEquipements() {
+        return equipements;
+    }
+
+    public void setEquipements(Set<Equipement> equipements) {
+        this.equipements = equipements;
+    }
+
+    
+    
     public Long getRegNumSt() {
         return RegNumSt;
     }

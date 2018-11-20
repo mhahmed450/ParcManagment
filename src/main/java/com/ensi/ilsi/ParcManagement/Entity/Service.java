@@ -29,12 +29,16 @@ public class Service extends AbstractEntity{
     private Set<Office> offices;
 
     public Service() {
+        //Service
     }
 
-    public Service(Long ServiceNumber, String name) {
+    public Service(Long ServiceNumber, String name, Set<Office> offices) {
         this.ServiceNumber = ServiceNumber;
         this.name = name;
+        this.offices = offices;
     }
+
+    
 
     public Set<Office> getOffices() {
         return offices;

@@ -30,19 +30,25 @@ public class Equipement extends AbstractEntity {
     @OneToMany
     private Set<Intervention> interventions ;  
     
-    @ManyToOne
-    private Office office;
+   
     
-    @ManyToOne
-    private User user ;
+  
 
-    public Office getOffice() {
-        return office;
+    
+    public Equipement() {
+        //Equipement
     }
 
-    public void setOffice(Office office) {
-        this.office = office;
+    public Equipement(Long Id, String name, String status, Set<Intervention> interventions) {
+        this.Id = Id;
+        this.name = name;
+        this.status = status;
+        this.interventions = interventions;
+        
+     
     }
+    
+    
     
     
 
@@ -54,12 +60,7 @@ public class Equipement extends AbstractEntity {
         this.interventions = interventions;
     }
 
-    public Equipement(Long Id, String name, String status, Set<Intervention> interventions) {
-        this.Id = Id;
-        this.name = name;
-        this.status = status;
-        this.interventions = interventions;
-    }
+    
     
     
 
@@ -117,9 +118,7 @@ public class Equipement extends AbstractEntity {
         return status;
     }
 
-    public Equipement() {
-        //
-    }
+    
     
     
 }
