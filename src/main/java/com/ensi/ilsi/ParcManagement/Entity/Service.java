@@ -6,22 +6,27 @@
 package com.ensi.ilsi.ParcManagement.Entity;
 
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Entity
-public class Service {
+public class Service extends AbstractEntity{
     
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ServiceNumber;
     private String name;
+    
+    @OneToMany
+    private Set<Office> offices;
 
     public Service() {
     }
@@ -31,6 +36,15 @@ public class Service {
         this.name = name;
     }
 
+    public Set<Office> getOffices() {
+        return offices;
+    }
+
+    public void setOffices(Set<Office> offices) {
+        this.offices = offices;
+    }
+
+    
     public Long getServiceNumber() {
         return ServiceNumber;
     }

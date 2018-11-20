@@ -12,28 +12,55 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Entity
-public class Intervention {
+public class Intervention extends AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long numIntervention;
     private String panne;
     private Date date;  
+    
+    @ManyToOne
+    private Equipement equipement ;
+    
+    @ManyToOne
+    private Intervenant intervenant ;
 
     public Intervention() {
     }
 
-    public Intervention(Long numIntervention, String panne, Date date) {
+    public Intervention(Long numIntervention, String panne, Date date, Equipement equipement) {
         this.numIntervention = numIntervention;
         this.panne = panne;
         this.date = date;
+        this.equipement = equipement;
     }
 
+    public Intervenant getIntervenant() {
+        return intervenant;
+    }
+
+    public void setIntervenant(Intervenant intervenant) {
+        this.intervenant = intervenant;
+    }
+
+   
+
+    public Equipement getEquipement() {
+        return equipement;
+    }
+
+    public void setEquipement(Equipement equipement) {
+        this.equipement = equipement;
+    }
+
+    
     public Long getNumIntervention() {
         return numIntervention;
     }

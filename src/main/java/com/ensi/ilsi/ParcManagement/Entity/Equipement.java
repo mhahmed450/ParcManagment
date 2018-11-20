@@ -7,26 +7,61 @@ package com.ensi.ilsi.ParcManagement.Entity;
 
 import com.ensi.ilsi.ParcManagement.*;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Entity
-public class Equipment {
+public class Equipement extends AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
+    private String name;
+    private String status;
+    
+    @OneToMany
+    private Set<Intervention> interventions ;  
+    
+    @ManyToOne
+    private Office office;
+    
+    @ManyToOne
+    private User user ;
 
-    public Equipment(Long Id, String name, String status) {
+    public Office getOffice() {
+        return office;
+    }
+
+    public void setOffice(Office office) {
+        this.office = office;
+    }
+    
+    
+
+    public Set<Intervention> getInterventions() {
+        return interventions;
+    }
+
+    public void setInterventions(Set<Intervention> interventions) {
+        this.interventions = interventions;
+    }
+
+    public Equipement(Long Id, String name, String status, Set<Intervention> interventions) {
         this.Id = Id;
         this.name = name;
         this.status = status;
+        this.interventions = interventions;
     }
+    
+    
 
     @Override
     public String toString() {
@@ -51,7 +86,7 @@ public class Equipment {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Equipment other = (Equipment) obj;
+        final Equipement other = (Equipement) obj;
         if (!Objects.equals(this.Id, other.Id)) {
             return false;
         }
@@ -82,10 +117,9 @@ public class Equipment {
         return status;
     }
 
-    public Equipment() {
+    public Equipement() {
+        //
     }
     
-    private String name;
-    private String status;
     
 }

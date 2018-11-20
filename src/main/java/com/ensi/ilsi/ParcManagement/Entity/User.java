@@ -6,28 +6,33 @@
 package com.ensi.ilsi.ParcManagement.Entity;
 
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Entity
-public class Stuff {
+public class User extends AbstractEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long RegNumSt;
     private String name;
     private String Email;
     private Long Phone;
+    
+    @OneToMany
+    private Set<Equipement> equipements;
 
-    public Stuff() {
+    public User() {
     }
 
-    public Stuff(Long RegNumSt, String name, String Email, Long Phone) {
+    public User(Long RegNumSt, String name, String Email, Long Phone) {
         this.RegNumSt = RegNumSt;
         this.name = name;
         this.Email = Email;
@@ -84,7 +89,7 @@ public class Stuff {
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Stuff other = (Stuff) obj;
+        final User other = (User) obj;
         if (!Objects.equals(this.Email, other.Email)) {
             return false;
         }

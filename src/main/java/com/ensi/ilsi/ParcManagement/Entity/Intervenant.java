@@ -7,17 +7,19 @@ package com.ensi.ilsi.ParcManagement.Entity;
 
 import com.ensi.ilsi.ParcManagement.*;
 import java.util.Objects;
+import java.util.Set;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
  @Entity
-public class Intervenant {
+public class Intervenant extends AbstractEntity {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,6 +27,19 @@ public class Intervenant {
     private String name;
     private String Email;
     private Long Phone;
+    
+    @OneToMany
+    private Set<Intervention> intervensions ;
+
+    public Set<Intervention> getIntervensions() {
+        return intervensions;
+    }
+
+    public void setIntervensions(Set<Intervention> intervensions) {
+        this.intervensions = intervensions;
+    }
+    
+    
 
     @Override
     public String toString() {
