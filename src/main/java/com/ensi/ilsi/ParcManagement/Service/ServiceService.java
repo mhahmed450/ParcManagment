@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Repository.Service;
+package com.ensi.ilsi.ParcManagement.Service;
 
 import com.ensi.ilsi.ParcManagement.Entity.Office;
 import com.ensi.ilsi.ParcManagement.Entity.Service;
