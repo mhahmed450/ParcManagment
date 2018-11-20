@@ -20,7 +20,9 @@ import org.springframework.stereotype.Repository;
 public interface IntervenantRepository extends JpaRepository <Intervenant,Long> {
     
     
-    //Optional<Intervenant> findByRegnumint(Long id);
+
+    
+    
     
     
 }

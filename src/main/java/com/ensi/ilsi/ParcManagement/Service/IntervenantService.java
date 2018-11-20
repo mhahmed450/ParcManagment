@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Repository.Service;
+package com.ensi.ilsi.ParcManagement.Service;
 
 
 import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
@@ -11,12 +11,16 @@ import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
 import com.ensi.ilsi.ParcManagement.Repository.IntervenantRepository;
 import java.util.List;
 import java.util.Optional;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
  * @author ahmed
  */
+
+@Service
+@Transactional
 public class IntervenantService {
     
     
@@ -49,7 +53,7 @@ public class IntervenantService {
    
 
     public Intervenant create(Intervenant intervenant){
-    
+   
         return  this.intervenantRepository.save(
                 new Intervenant(
                         

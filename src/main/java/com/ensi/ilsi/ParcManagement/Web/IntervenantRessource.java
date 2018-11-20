@@ -5,10 +5,9 @@
  */
 package com.ensi.ilsi.ParcManagement.Web;
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
 import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
-import com.ensi.ilsi.ParcManagement.Repository.Service.EquipementService;
-import com.ensi.ilsi.ParcManagement.Repository.Service.IntervenantService;
+
+import com.ensi.ilsi.ParcManagement.Service.IntervenantService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;

@@ -23,7 +23,7 @@ public class Intervenant  {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Regnumint;
+    private Long id;
     private String name;
     private String Email;
     private Long Phone;
