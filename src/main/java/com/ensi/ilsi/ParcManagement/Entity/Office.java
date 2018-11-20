@@ -20,7 +20,7 @@ import javax.persistence.OneToMany;
  * @author Ahmed
  */
 @Entity
-public class Office extends AbstractEntity {
+public class Office  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long OfficeNumber;
@@ -35,8 +35,8 @@ public class Office extends AbstractEntity {
         //office
     }
 
-    public Office(Long OfficeNumber, String name, Set<Equipement> equipements, Service service) {
-        this.OfficeNumber = OfficeNumber;
+    public Office( String name, Set<Equipement> equipements, Service service) {
+       
         this.name = name;
         this.equipements = equipements;
         this.service = service;

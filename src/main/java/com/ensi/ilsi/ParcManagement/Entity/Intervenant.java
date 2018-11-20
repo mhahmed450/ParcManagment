@@ -19,11 +19,11 @@ import javax.persistence.OneToMany;
  * @author Ahmed
  */
  @Entity
-public class Intervenant extends AbstractEntity {
+public class Intervenant  {
     
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long RegNumInt;
+    private Long Regnumint;
     private String name;
     private String Email;
     private Long Phone;
@@ -37,8 +37,8 @@ public class Intervenant extends AbstractEntity {
     }
     
 
-    public Intervenant(Long RegNumInt, String name, String Email, Long Phone, Set<Intervention> intervensions) {
-        this.RegNumInt = RegNumInt;
+    public Intervenant( String name, String Email, Long Phone, Set<Intervention> intervensions) {
+       
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;
@@ -86,9 +86,7 @@ public class Intervenant extends AbstractEntity {
         return true;
     }
 
-    public void setRegNumInt(Long RegNumInt) {
-        this.RegNumInt = RegNumInt;
-    }
+   
 
     public void setName(String name) {
         this.name = name;
@@ -102,9 +100,7 @@ public class Intervenant extends AbstractEntity {
         this.Phone = Phone;
     }
 
-    public Long getRegNumInt() {
-        return RegNumInt;
-    }
+    
 
     public String getName() {
         return name;
@@ -118,8 +114,8 @@ public class Intervenant extends AbstractEntity {
         return Phone;
     }
 
-    public Intervenant(Long RegNumInt, String name, String Email, Long Phone) {
-        this.RegNumInt = RegNumInt;
+    public Intervenant(String name, String Email, Long Phone) {
+       
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;

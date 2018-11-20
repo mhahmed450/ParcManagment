@@ -19,7 +19,7 @@ import javax.persistence.ManyToOne;
  * @author Ahmed
  */
 @Entity
-public class Intervention extends AbstractEntity {
+public class Intervention  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long numIntervention;
@@ -36,8 +36,8 @@ public class Intervention extends AbstractEntity {
         //intervention 
     }
 
-    public Intervention(Long numIntervention, String panne, Date date, Equipement equipement, Intervenant intervenant) {
-        this.numIntervention = numIntervention;
+    public Intervention( String panne, Date date, Equipement equipement, Intervenant intervenant) {
+        
         this.panne = panne;
         this.date = date;
         this.equipement = equipement;

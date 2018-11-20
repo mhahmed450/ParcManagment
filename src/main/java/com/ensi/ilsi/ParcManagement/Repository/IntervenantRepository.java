@@ -7,13 +7,20 @@ package com.ensi.ilsi.ParcManagement.Repository;
 
 import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
 import com.ensi.ilsi.ParcManagement.Entity.Intervention;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author Administrator
+ 
  */
+@Repository
 public interface IntervenantRepository extends JpaRepository <Intervenant,Long> {
-Intervenant findByRegNumInt(int id) ;
+    
+    
+    //Optional<Intervenant> findByRegnumint(Long id);
+    
     
 }

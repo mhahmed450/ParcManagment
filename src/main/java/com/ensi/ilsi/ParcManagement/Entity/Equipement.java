@@ -14,13 +14,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
 /**
  *
  * @author Ahmed
  */
 @Entity
-public class Equipement extends AbstractEntity {
+@Table(name = "Equipement")
+public class Equipement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long Id;
@@ -39,8 +41,8 @@ public class Equipement extends AbstractEntity {
         //Equipement
     }
 
-    public Equipement(Long Id, String name, String status, Set<Intervention> interventions) {
-        this.Id = Id;
+    public Equipement( String name, String status, Set<Intervention> interventions) {
+      
         this.name = name;
         this.status = status;
         this.interventions = interventions;

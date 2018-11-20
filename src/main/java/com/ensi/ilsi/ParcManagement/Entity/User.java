@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
  * @author Ahmed
  */
 @Entity
-public class User extends AbstractEntity {
+public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long RegNumSt;
@@ -33,8 +33,8 @@ public class User extends AbstractEntity {
         //User
     }
 
-    public User(Long RegNumSt, String name, String Email, Long Phone, Set<Equipement> equipements) {
-        this.RegNumSt = RegNumSt;
+    public User(String name, String Email, Long Phone, Set<Equipement> equipements) {
+        
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;

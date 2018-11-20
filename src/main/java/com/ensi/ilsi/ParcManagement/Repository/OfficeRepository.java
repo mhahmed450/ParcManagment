@@ -17,6 +17,6 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface OfficeRepository extends JpaRepository <Office,Long> {
-    Office findByOfficeNumber(int id) ;
+    //Office findByOfficeNumberOffice(int id) ;
     
 }

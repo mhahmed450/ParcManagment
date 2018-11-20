@@ -18,7 +18,7 @@ import javax.persistence.OneToMany;
  * @author Ahmed
  */
 @Entity
-public class Service extends AbstractEntity{
+public class Service {
     
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -32,8 +32,8 @@ public class Service extends AbstractEntity{
         //Service
     }
 
-    public Service(Long ServiceNumber, String name, Set<Office> offices) {
-        this.ServiceNumber = ServiceNumber;
+    public Service( String name, Set<Office> offices) {
+        
         this.name = name;
         this.offices = offices;
     }

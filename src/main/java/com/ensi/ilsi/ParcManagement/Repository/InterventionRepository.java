@@ -7,6 +7,7 @@ package com.ensi.ilsi.ParcManagement.Repository;
 
 import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
 import com.ensi.ilsi.ParcManagement.Entity.Intervention;
+import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface InterventionRepository extends JpaRepository <Intervention,Long> {
-Intervention findBynumIntervention(int id) ;
+   // Optional<Intervention> findBynumIntervention(Long id) ;
  
     
 }

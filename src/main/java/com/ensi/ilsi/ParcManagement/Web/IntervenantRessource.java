@@ -6,7 +6,9 @@
 package com.ensi.ilsi.ParcManagement.Web;
 
 import com.ensi.ilsi.ParcManagement.Entity.Equipement;
+import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
 import com.ensi.ilsi.ParcManagement.Repository.Service.EquipementService;
+import com.ensi.ilsi.ParcManagement.Repository.Service.IntervenantService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -24,32 +26,32 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
-@RequestMapping("/API/equipements")
-public class EquipementRessource {
+@RequestMapping("/API/intervenant")
+public class IntervenantRessource {
     
-    private final EquipementService equipementService;
+    private final IntervenantService intervenantService;
 
-    public EquipementRessource(EquipementService equipementService) {
-        this.equipementService = equipementService;
+    public IntervenantRessource(IntervenantService intervenantService) {
+        this.intervenantService = intervenantService;
     }
     
     @GetMapping
-    public List<Equipement> findAll(){
-        return this.equipementService.findAll();   }
+    public List<Intervenant> findAll(){
+        return this.intervenantService.findAll();   }
     
-    @GetMapping("/equipement/{id}")
-    public Optional<Equipement> getEquipement(@PathParam("id") Long  id){
-        return this.equipementService.findById(id);
+    @GetMapping("/intervenant/{id}")
+    public Optional<Intervenant> getIntervenant(@PathParam("id") Long  id){
+        return this.intervenantService.findById(id);
     }
     
-    @PostMapping("/equipement/{name}")
-    public Equipement createEquipement(@PathParam("name") String name){
-        return this.equipementService.create(name);
+    @PostMapping("/intervenant/{intervenant}")
+    public Intervenant addIntervenant(@PathParam("intervenant") Intervenant intervenant){
+        return this.intervenantService.create(intervenant);
     }
     
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        this.equipementService.delete(id);
+        this.intervenantService.delete(id);
         
     }
     
