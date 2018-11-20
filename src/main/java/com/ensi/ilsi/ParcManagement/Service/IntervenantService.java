@@ -54,14 +54,7 @@ public class IntervenantService {
 
     public Intervenant create(Intervenant intervenant){
    
-        return  this.intervenantRepository.save(
-                new Intervenant(
-                        
-                         intervenant.getName(),
-                         intervenant.getEmail(),
-                         intervenant.getPhone(),
-                         intervenant.getIntervensions()
-                ) );
+        return  this.intervenantRepository.save(intervenant );
         
     }
 

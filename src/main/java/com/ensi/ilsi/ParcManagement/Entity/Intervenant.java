@@ -119,6 +119,7 @@ public class Intervenant  {
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;
+        this.intervensions=null;
     }
 
     

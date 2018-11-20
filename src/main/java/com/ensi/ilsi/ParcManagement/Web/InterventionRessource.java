@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -54,7 +55,7 @@ public class InterventionRessource {
         return this.interventionService.findByPanne(panne);
     }
     @PostMapping("/{intervention}")
-    public Intervention createIntervention(@PathVariable("intervention") Intervention intervention){
+    public Intervention createIntervention(@RequestBody Intervention intervention){
         return this.interventionService.create(intervention);
     }
     
