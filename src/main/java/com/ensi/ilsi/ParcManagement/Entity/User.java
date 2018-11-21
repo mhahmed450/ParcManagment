@@ -21,10 +21,10 @@ import javax.persistence.OneToMany;
 public class User  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
     private String name;
-    private String Email;
-    private Long Phone;
+    private String email;
+    private Long phone;
     
     @OneToMany
     private Set<Equipement> equipements;
@@ -36,8 +36,8 @@ public class User  {
     public User(String name, String Email, Long Phone, Set<Equipement> equipements) {
         
         this.name = name;
-        this.Email = Email;
-        this.Phone = Phone;
+        this.email = Email;
+        this.phone = Phone;
         this.equipements = equipements;
     }
 
@@ -60,11 +60,11 @@ public class User  {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public Long getPhone() {
-        return Phone;
+        return phone;
     }
 
     
@@ -73,17 +73,17 @@ public class User  {
     }
 
     public void setEmail(String Email) {
-        this.Email = Email;
+        this.email = Email;
     }
 
     public void setPhone(Long Phone) {
-        this.Phone = Phone;
+        this.phone = Phone;
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 17 * hash + Objects.hashCode(this.Email);
+        hash = 17 * hash + Objects.hashCode(this.email);
         return hash;
     }
 
@@ -99,7 +99,7 @@ public class User  {
             return false;
         }
         final User other = (User) obj;
-        if (!Objects.equals(this.Email, other.Email)) {
+        if (!Objects.equals(this.email, other.email)) {
             return false;
         }
         return true;
@@ -107,7 +107,7 @@ public class User  {
 
     @Override
     public String toString() {
-        return "Stuff{" + "name=" + name + ", Email=" + Email + ", Phone=" + Phone + '}';
+        return "Stuff{" + "name=" + name + ", Email=" + email + ", Phone=" + phone + '}';
     }
     
 }

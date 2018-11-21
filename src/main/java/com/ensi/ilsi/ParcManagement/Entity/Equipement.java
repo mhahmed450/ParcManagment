@@ -25,7 +25,7 @@ import javax.persistence.Table;
 public class Equipement {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long Id;
+    private Long id;
     private String name;
     private String status;
     
@@ -74,7 +74,7 @@ public class Equipement {
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.Id);
+        hash = 83 * hash + Objects.hashCode(this.id);
         return hash;
     }
 
@@ -90,14 +90,14 @@ public class Equipement {
             return false;
         }
         final Equipement other = (Equipement) obj;
-        if (!Objects.equals(this.Id, other.Id)) {
+        if (!Objects.equals(this.id, other.id)) {
             return false;
         }
         return true;
     }
 
     public void setId(Long Id) {
-        this.Id = Id;
+        this.id = Id;
     }
 
     public void setName(String name) {
@@ -109,7 +109,7 @@ public class Equipement {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public String getName() {

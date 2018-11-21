@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.Entity;
 
-import com.ensi.ilsi.ParcManagement.*;
+
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;
@@ -25,8 +25,8 @@ public class Intervenant  {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
-    private String Email;
-    private Long Phone;
+    private String email;
+    private Long phone;
     
     @OneToMany
     private Set<Intervention> intervensions ;
@@ -37,11 +37,11 @@ public class Intervenant  {
     }
     
 
-    public Intervenant( String name, String Email, Long Phone, Set<Intervention> intervensions) {
+    public Intervenant( String name, String email, Long phone, Set<Intervention> intervensions) {
        
         this.name = name;
-        this.Email = Email;
-        this.Phone = Phone;
+        this.email = email;
+        this.phone = phone;
         this.intervensions = intervensions;
     }
 
@@ -58,13 +58,13 @@ public class Intervenant  {
 
     @Override
     public String toString() {
-        return "Intervenant{" + "name=" + name + ", Email=" + Email + ", Phone=" + Phone + '}';
+        return "Intervenant{" + "name=" + name + ", Email=" + email + ", Phone=" + phone + '}';
     }
 
     @Override
     public int hashCode() {
         int hash = 7;
-        hash = 29 * hash + Objects.hashCode(this.Email);
+        hash = 29 * hash + Objects.hashCode(this.email);
         return hash;
     }
 
@@ -80,7 +80,7 @@ public class Intervenant  {
             return false;
         }
         final Intervenant other = (Intervenant) obj;
-        if (!Objects.equals(this.Email, other.Email)) {
+        if (!Objects.equals(this.email, other.email)) {
             return false;
         }
         return true;
@@ -93,11 +93,11 @@ public class Intervenant  {
     }
 
     public void setEmail(String Email) {
-        this.Email = Email;
+        this.email = Email;
     }
 
     public void setPhone(Long Phone) {
-        this.Phone = Phone;
+        this.phone = Phone;
     }
 
     
@@ -107,18 +107,18 @@ public class Intervenant  {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
     public Long getPhone() {
-        return Phone;
+        return phone;
     }
 
     public Intervenant(String name, String Email, Long Phone) {
        
         this.name = name;
-        this.Email = Email;
-        this.Phone = Phone;
+        this.email = Email;
+        this.phone = Phone;
         this.intervensions=null;
     }
 

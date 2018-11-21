@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.Entity;
 
-import com.ensi.ilsi.ParcManagement.*;
+
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;
@@ -23,7 +23,7 @@ import javax.persistence.OneToMany;
 public class Office  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long OfficeNumber;
+    private Long officeNumber;
     private String name;
     
     @OneToMany
@@ -65,7 +65,7 @@ public class Office  {
     
 
     public Long getOfficeNumber() {
-        return OfficeNumber;
+        return officeNumber;
     }
 
     public String getName() {
@@ -73,7 +73,7 @@ public class Office  {
     }
 
     public void setOfficeNumber(Long OfficeNumber) {
-        this.OfficeNumber = OfficeNumber;
+        this.officeNumber = OfficeNumber;
     }
 
     public void setName(String name) {
@@ -107,7 +107,7 @@ public class Office  {
 
     @Override
     public String toString() {
-        return "Office{" + "OfficeNumber=" + OfficeNumber + ", name=" + name + '}';
+        return "Office{" + "OfficeNumber=" + officeNumber + ", name=" + name + '}';
     }
     
     

@@ -22,7 +22,7 @@ public class Service {
     
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long ServiceNumber;
+    private Long serviceNumber;
     private String name;
     
     @OneToMany
@@ -50,7 +50,7 @@ public class Service {
 
     
     public Long getServiceNumber() {
-        return ServiceNumber;
+        return serviceNumber;
     }
 
     public String getName() {
@@ -58,7 +58,7 @@ public class Service {
     }
 
     public void setServiceNumber(Long ServiceNumber) {
-        this.ServiceNumber = ServiceNumber;
+        this.serviceNumber = ServiceNumber;
     }
 
     public void setName(String name) {
@@ -92,7 +92,7 @@ public class Service {
 
     @Override
     public String toString() {
-        return "Service{" + "ServiceNumber=" + ServiceNumber + ", name=" + name + '}';
+        return "Service{" + "ServiceNumber=" + serviceNumber + ", name=" + name + '}';
     }
     
     
