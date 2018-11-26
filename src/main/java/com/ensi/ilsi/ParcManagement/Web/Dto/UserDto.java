@@ -26,7 +26,8 @@ public class UserDto {
     
 
    
-    
+     public UserDto() {
+    }
 
     public UserDto(Long RegNumSt, String name, String Email, Long Phone, Set<Long> equipementsId) {
         this.RegNumSt = RegNumSt;
