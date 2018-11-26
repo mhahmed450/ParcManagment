@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web;
+package com.ensi.ilsi.ParcManagement.web;
 
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervention;
+import com.ensi.ilsi.ParcManagement.entity.Intervention;
 
-import com.ensi.ilsi.ParcManagement.Service.InterventionService;
+import com.ensi.ilsi.ParcManagement.service.InterventionService;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;

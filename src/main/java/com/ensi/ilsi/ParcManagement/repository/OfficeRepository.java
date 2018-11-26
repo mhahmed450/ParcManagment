@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Repository;
+package com.ensi.ilsi.ParcManagement.repository;
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
-import com.ensi.ilsi.ParcManagement.Entity.Intervention;
-import com.ensi.ilsi.ParcManagement.Entity.Office;
+import com.ensi.ilsi.ParcManagement.entity.Intervenant;
+import com.ensi.ilsi.ParcManagement.entity.Intervention;
+import com.ensi.ilsi.ParcManagement.entity.Office;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

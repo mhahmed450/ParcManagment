@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Office;
+import com.ensi.ilsi.ParcManagement.entity.Office;
 import java.util.Set;
 
 
@@ -16,7 +16,7 @@ import java.util.Set;
 public class ServiceDto {
     
     
-    private Long ServiceNumber;
+    private Long serviceNumber;
     private String name;
     
  
@@ -25,8 +25,8 @@ public class ServiceDto {
     public ServiceDto() {
     }
 
-    public ServiceDto(Long ServiceNumber, String name, Set<Long> officesId) {
-        this.ServiceNumber = ServiceNumber;
+    public ServiceDto(Long serviceNumber, String name, Set<Long> officesId) {
+        this.serviceNumber = serviceNumber;
         this.name = name;
         this.officesId = officesId;
     }
@@ -34,11 +34,11 @@ public class ServiceDto {
     
     
     public Long getServiceNumber() {
-        return ServiceNumber;
+        return serviceNumber;
     }
 
-    public void setServiceNumber(Long ServiceNumber) {
-        this.ServiceNumber = ServiceNumber;
+    public void setServiceNumber(Long serviceNumber) {
+        this.serviceNumber = serviceNumber;
     }
 
     public String getName() {

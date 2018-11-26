@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervention;
-import com.ensi.ilsi.ParcManagement.Entity.Office;
-import com.ensi.ilsi.ParcManagement.Entity.User;
+import com.ensi.ilsi.ParcManagement.entity.Intervention;
+import com.ensi.ilsi.ParcManagement.entity.Office;
+import com.ensi.ilsi.ParcManagement.entity.User;
 import java.util.Set;
 
 
@@ -17,7 +17,7 @@ import java.util.Set;
  */
 public class EquipementDto {
     
-    private Long Id;
+    private Long id;
     private String name;
     private String status;
     private Set<Long> interventionsId ;  
@@ -25,8 +25,8 @@ public class EquipementDto {
   
     
 
-    public EquipementDto(Long Id, String name, String status, Set<Long> interventionsId) {
-        this.Id = Id;
+    public EquipementDto(Long id, String name, String status, Set<Long> interventionsId) {
+        this.id = id;
         this.name = name;
         this.status = status;
         this.interventionsId = interventionsId;
@@ -35,11 +35,11 @@ public class EquipementDto {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
-    public void setId(Long Id) {
-        this.Id = Id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getName() {

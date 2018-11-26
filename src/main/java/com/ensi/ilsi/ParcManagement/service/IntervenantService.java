@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Service;
+package com.ensi.ilsi.ParcManagement.service;
 
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
+import com.ensi.ilsi.ParcManagement.entity.Intervenant;
 
-import com.ensi.ilsi.ParcManagement.Repository.IntervenantRepository;
+import com.ensi.ilsi.ParcManagement.repository.IntervenantRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.stereotype.Service;

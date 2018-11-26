@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
-import com.ensi.ilsi.ParcManagement.Entity.Service;
+import com.ensi.ilsi.ParcManagement.entity.Equipement;
+import com.ensi.ilsi.ParcManagement.entity.Service;
 import java.util.Set;
 
 
@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class OfficeDto {
     
-    private Long OfficeNumber;
+    private Long officeNumber;
     private String name;
     
     
@@ -30,8 +30,8 @@ public class OfficeDto {
 
     
 
-    public OfficeDto(Long OfficeNumber, String name, Set<Long> equipementsId, Service service) {
-        this.OfficeNumber = OfficeNumber;
+    public OfficeDto(Long officeNumber, String name, Set<Long> equipementsId, Service service) {
+        this.officeNumber = officeNumber;
         this.name = name;
         this.equipementsId = equipementsId;
         this.service = service;
@@ -41,11 +41,11 @@ public class OfficeDto {
     
 
     public Long getOfficeNumber() {
-        return OfficeNumber;
+        return officeNumber;
     }
 
-    public void setOfficeNumber(Long OfficeNumber) {
-        this.OfficeNumber = OfficeNumber;
+    public void setOfficeNumber(Long officeNumber) {
+        this.officeNumber = officeNumber;
     }
 
     public String getName() {

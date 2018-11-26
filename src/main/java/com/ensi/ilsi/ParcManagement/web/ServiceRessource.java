@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web;
+package com.ensi.ilsi.ParcManagement.web;
 
 
-import com.ensi.ilsi.ParcManagement.Entity.Service;
+import com.ensi.ilsi.ParcManagement.entity.Service;
 
-import com.ensi.ilsi.ParcManagement.Service.ServiceService;
+import com.ensi.ilsi.ParcManagement.service.ServiceService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;

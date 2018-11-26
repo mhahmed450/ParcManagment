@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
+import com.ensi.ilsi.ParcManagement.entity.Equipement;
 import java.util.Set;
 
 
@@ -15,10 +15,10 @@ import java.util.Set;
  */
 public class UserDto {
     
-    private Long RegNumSt;
+    private Long regNumSt;
     private String name;
-    private String Email;
-    private Long Phone;
+    private String email;
+    private Long phone;
    
     
     private Set<Long> equipementsId;
@@ -29,11 +29,11 @@ public class UserDto {
     }
     
 
-    public UserDto(Long RegNumSt, String name, String Email, Long Phone, Set<Long> equipementsId) {
-        this.RegNumSt = RegNumSt;
+    public UserDto(Long regNumSt, String name, String email, Long phone, Set<Long> equipementsId) {
+        this.regNumSt = regNumSt;
         this.name = name;
-        this.Email = Email;
-        this.Phone = Phone;
+        this.email = email;
+        this.phone = phone;
         this.equipementsId = equipementsId;
     }
     
@@ -41,11 +41,11 @@ public class UserDto {
     
 
     public Long getRegNumSt() {
-        return RegNumSt;
+        return regNumSt;
     }
 
-    public void setRegNumSt(Long RegNumSt) {
-        this.RegNumSt = RegNumSt;
+    public void setRegNumSt(Long regNumSt) {
+        this.regNumSt = regNumSt;
     }
 
     public String getName() {
@@ -57,19 +57,19 @@ public class UserDto {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Long getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone(Long Phone) {
-        this.Phone = Phone;
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 
     public Set<Long> getEquipementsId() {

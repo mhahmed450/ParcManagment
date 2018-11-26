@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Entity;
+package com.ensi.ilsi.ParcManagement.entity;
 
 
 import java.util.Objects;
@@ -96,8 +96,8 @@ public class Equipement {
         return true;
     }
 
-    public void setId(Long Id) {
-        this.id = Id;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public void setName(String name) {

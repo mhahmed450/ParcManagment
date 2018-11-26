@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Entity;
+package com.ensi.ilsi.ParcManagement.entity;
 
 import java.util.Objects;
 import java.util.Set;
@@ -33,11 +33,11 @@ public class User  {
         //User
     }
 
-    public User(String name, String Email, Long Phone, Set<Equipement> equipements) {
+    public User(String name, String email, Long phone, Set<Equipement> equipements) {
         
         this.name = name;
-        this.email = Email;
-        this.phone = Phone;
+        this.email = email;
+        this.phone = phone;
         this.equipements = equipements;
     }
 
@@ -72,12 +72,12 @@ public class User  {
         this.name = name;
     }
 
-    public void setEmail(String Email) {
-        this.email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
-    public void setPhone(Long Phone) {
-        this.phone = Phone;
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 
     @Override

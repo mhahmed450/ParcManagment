@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
-import com.ensi.ilsi.ParcManagement.Entity.Intervenant;
+import com.ensi.ilsi.ParcManagement.entity.Equipement;
+import com.ensi.ilsi.ParcManagement.entity.Intervenant;
 import java.util.Date;
 import javax.persistence.ManyToOne;
 

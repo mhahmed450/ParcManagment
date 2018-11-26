@@ -3,14 +3,15 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Service;
+package com.ensi.ilsi.ParcManagement.service;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.ensi.ilsi.ParcManagement.Repository.EquipementRepository;
+import com.ensi.ilsi.ParcManagement.repository.EquipementRepository;
 
 
-import com.ensi.ilsi.ParcManagement.Entity.Equipement;
+import com.ensi.ilsi.ParcManagement.entity.Equipement;
+import com.ensi.ilsi.ParcManagement.web.dto.EquipementDto;
 
 import java.util.List;
 import java.util.Optional;
@@ -24,6 +25,18 @@ import java.util.Optional;
 @Service
 
 public class EquipementService {
+
+    /* public static EquipementDto mapToDto(Equipement equipement) {
+        if (equipement != null) {
+            return new EquipementDto(
+                    equipement.getId(),
+                    equipement.getOrder().getId(),
+                    CustomerService.mapToDto(cart.getCustomer()),
+                    cart.getStatus().name()
+            );
+        }
+        return null;
+    }*/
 
     
     private final EquipementRepository equipementRepository ;

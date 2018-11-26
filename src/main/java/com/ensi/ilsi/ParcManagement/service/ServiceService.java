@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Service;
+package com.ensi.ilsi.ParcManagement.service;
 
 
-import com.ensi.ilsi.ParcManagement.Entity.Service;
+import com.ensi.ilsi.ParcManagement.entity.Service;
 
-import com.ensi.ilsi.ParcManagement.Repository.ServiceRepository;
+import com.ensi.ilsi.ParcManagement.repository.ServiceRepository;
 import java.util.List;
 import java.util.Optional;
 import org.springframework.transaction.annotation.Transactional;

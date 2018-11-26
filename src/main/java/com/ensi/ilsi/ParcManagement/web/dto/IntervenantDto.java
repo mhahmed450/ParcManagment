@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.Web.Dto;
+package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.Entity.Intervention;
+import com.ensi.ilsi.ParcManagement.entity.Intervention;
 import java.util.Set;
 import javax.persistence.OneToMany;
 
@@ -15,10 +15,10 @@ import javax.persistence.OneToMany;
  */
 public class IntervenantDto {
     
-    private Long RegNumInt;
+    private Long regNumInt;
     private String name;
-    private String Email;
-    private Long Phone;
+    private String email;
+    private Long phone;
     
 
 
@@ -26,11 +26,11 @@ public class IntervenantDto {
     public IntervenantDto() {
     }
 
-    public IntervenantDto(Long RegNumInt, String name, String Email, Long Phone) {
-        this.RegNumInt = RegNumInt;
+    public IntervenantDto(Long regNumInt, String name, String email, Long phone) {
+        this.regNumInt = regNumInt;
         this.name = name;
-        this.Email = Email;
-        this.Phone = Phone;
+        this.email = email;
+        this.phone = phone;
         
     }
     
@@ -38,11 +38,11 @@ public class IntervenantDto {
     
 
     public Long getRegNumInt() {
-        return RegNumInt;
+        return regNumInt;
     }
 
-    public void setRegNumInt(Long RegNumInt) {
-        this.RegNumInt = RegNumInt;
+    public void setRegNumInt(Long regNumInt) {
+        this.regNumInt = regNumInt;
     }
 
     public String getName() {
@@ -54,19 +54,19 @@ public class IntervenantDto {
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public void setEmail(String Email) {
-        this.Email = Email;
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public Long getPhone() {
-        return Phone;
+        return phone;
     }
 
-    public void setPhone(Long Phone) {
-        this.Phone = Phone;
+    public void setPhone(Long phone) {
+        this.phone = phone;
     }
 
   
