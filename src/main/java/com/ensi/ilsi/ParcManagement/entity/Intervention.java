@@ -54,11 +54,11 @@ public class Intervention  {
     }
 
    
-
-    public Long getNumIntervention() {
+ public Long getNumIntervention() {
         return numIntervention;
     }
 
+   
     public String getPanne() {
         return panne;
     }
@@ -67,9 +67,7 @@ public class Intervention  {
         return date;
     }
 
-    public void setNumIntervention(Long numIntervention) {
-        this.numIntervention = numIntervention;
-    }
+   
 
     public void setPanne(String panne) {
         this.panne = panne;
