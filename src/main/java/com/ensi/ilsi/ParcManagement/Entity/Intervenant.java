@@ -28,8 +28,7 @@ public class Intervenant  {
     private String email;
     private Long phone;
     
-    @OneToMany
-    private Set<Intervention> intervensions ;
+   
     
     
     public Intervenant() {
@@ -37,23 +36,15 @@ public class Intervenant  {
     }
     
 
-    public Intervenant( String name, String email, Long phone, Set<Intervention> intervensions) {
+    public Intervenant( String name, String email, Long phone) {
        
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.intervensions = intervensions;
+        
     }
 
-    
-    public Set<Intervention> getIntervensions() {
-        return intervensions;
-    }
 
-    public void setIntervensions(Set<Intervention> intervensions) {
-        this.intervensions = intervensions;
-    }
-    
     
 
     @Override
@@ -114,13 +105,7 @@ public class Intervenant  {
         return phone;
     }
 
-    public Intervenant(String name, String Email, Long Phone) {
-       
-        this.name = name;
-        this.email = Email;
-        this.phone = Phone;
-        this.intervensions=null;
-    }
+   
 
     
     

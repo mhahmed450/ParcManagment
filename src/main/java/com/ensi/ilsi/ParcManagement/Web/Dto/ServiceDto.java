@@ -20,15 +20,15 @@ public class ServiceDto {
     private String name;
     
  
-    private Set<OfficeDto> offices;
+    private Set<Long> officesId;
 
     public ServiceDto() {
     }
 
-    public ServiceDto(Long ServiceNumber, String name, Set<OfficeDto> offices) {
+    public ServiceDto(Long ServiceNumber, String name, Set<Long> officesId) {
         this.ServiceNumber = ServiceNumber;
         this.name = name;
-        this.offices = offices;
+        this.officesId = officesId;
     }
 
     
@@ -49,12 +49,12 @@ public class ServiceDto {
         this.name = name;
     }
 
-    public Set<OfficeDto> getOffices() {
-        return offices;
+    public Set<Long> getOfficesId() {
+        return officesId;
     }
 
-    public void setOffices(Set<OfficeDto> offices) {
-        this.offices = offices;
+    public void setOfficesId(Set<Long> officesId) {
+        this.officesId = officesId;
     }
     
     

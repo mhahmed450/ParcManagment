@@ -20,18 +20,18 @@ public class IntervenantDto {
     private String Email;
     private Long Phone;
     
-    private Set<InterventionDto> intervensions ;
+
 
     
     public IntervenantDto() {
     }
 
-    public IntervenantDto(Long RegNumInt, String name, String Email, Long Phone, Set<InterventionDto> intervensions) {
+    public IntervenantDto(Long RegNumInt, String name, String Email, Long Phone) {
         this.RegNumInt = RegNumInt;
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;
-        this.intervensions = intervensions;
+        
     }
     
     
@@ -69,15 +69,7 @@ public class IntervenantDto {
         this.Phone = Phone;
     }
 
-    public Set<InterventionDto> getIntervensions() {
-        return intervensions;
-    }
-
-    public void setIntervensions(Set<InterventionDto> intervensions) {
-        this.intervensions = intervensions;
-    }
-    
-    
+  
     
     
 }

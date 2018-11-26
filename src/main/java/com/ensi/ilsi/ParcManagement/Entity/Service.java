@@ -25,29 +25,21 @@ public class Service {
     private Long serviceNumber;
     private String name;
     
-    @OneToMany
-    private Set<Office> offices;
+   
 
     public Service() {
         //Service
     }
 
-    public Service( String name, Set<Office> offices) {
+    public Service( String name) {
         
         this.name = name;
-        this.offices = offices;
+        
     }
 
     
 
-    public Set<Office> getOffices() {
-        return offices;
-    }
-
-    public void setOffices(Set<Office> offices) {
-        this.offices = offices;
-    }
-
+   
     
     public Long getServiceNumber() {
         return serviceNumber;

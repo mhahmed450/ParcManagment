@@ -29,32 +29,19 @@ public class Office  {
     @OneToMany
     private Set<Equipement> equipements;
     
-    @ManyToOne
-    private Service service ;
+   
     public Office() {
         //office
     }
 
-    public Office( String name, Set<Equipement> equipements, Service service) {
+    public Office( String name, Set<Equipement> equipements) {
        
         this.name = name;
         this.equipements = equipements;
-        this.service = service;
+      
     }
 
-    
-
-    public Service getService() {
-        return service;
-    }
-
-    public void setService(Service service) {
-        this.service = service;
-    }
-    
-    
-    
-    
+  
     public Set<Equipement> getEquipements() {
         return equipements;
     }

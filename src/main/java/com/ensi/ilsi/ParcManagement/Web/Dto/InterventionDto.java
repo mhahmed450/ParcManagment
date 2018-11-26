@@ -21,7 +21,6 @@ public class InterventionDto {
     private Date date;  
     
     
-    private EquipementDto equipementID ;
     
     
     private IntervenantDto intervenantID ;
@@ -29,11 +28,11 @@ public class InterventionDto {
     public InterventionDto() {
     }
 
-    public InterventionDto(Long numIntervention, String panne, Date date, EquipementDto equipementID, IntervenantDto intervenantID) {
+    public InterventionDto(Long numIntervention, String panne, Date date, IntervenantDto intervenantID) {
         this.numIntervention = numIntervention;
         this.panne = panne;
         this.date = date;
-        this.equipementID = equipementID;
+       
         this.intervenantID = intervenantID;
     }
 
@@ -61,13 +60,7 @@ public class InterventionDto {
         this.date = date;
     }
 
-    public EquipementDto getEquipementID() {
-        return equipementID;
-    }
-
-    public void setEquipementID(EquipementDto equipementID) {
-        this.equipementID = equipementID;
-    }
+  
 
     public IntervenantDto getIntervenantID() {
         return intervenantID;

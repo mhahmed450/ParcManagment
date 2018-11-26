@@ -26,8 +26,7 @@ public class Intervention  {
     private String panne;
     private Date date;  
     
-    @ManyToOne
-    private Equipement equipement ;
+    
     
     @ManyToOne
     private Intervenant intervenant ;
@@ -36,11 +35,11 @@ public class Intervention  {
         //intervention 
     }
 
-    public Intervention( String panne, Date date, Equipement equipement, Intervenant intervenant) {
+    public Intervention( String panne, Date date,Intervenant intervenant) {
         
         this.panne = panne;
         this.date = date;
-        this.equipement = equipement;
+
         this.intervenant = intervenant;
     }
 
@@ -56,15 +55,6 @@ public class Intervention  {
 
    
 
-    public Equipement getEquipement() {
-        return equipement;
-    }
-
-    public void setEquipement(Equipement equipement) {
-        this.equipement = equipement;
-    }
-
-    
     public Long getNumIntervention() {
         return numIntervention;
     }

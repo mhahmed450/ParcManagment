@@ -20,16 +20,16 @@ public class EquipementDto {
     private Long Id;
     private String name;
     private String status;
-    private Set<InterventionDto> interventions ;  
+    private Set<Long> interventionsId ;  
     
   
     
 
-    public EquipementDto(Long Id, String name, String status, Set<InterventionDto> interventionsDto) {
+    public EquipementDto(Long Id, String name, String status, Set<Long> interventionsId) {
         this.Id = Id;
         this.name = name;
         this.status = status;
-        this.interventions = interventionsDto;
+        this.interventionsId = interventionsId;
      
       
     }
@@ -58,14 +58,15 @@ public class EquipementDto {
         this.status = status;
     }
 
-    public Set<InterventionDto> getInterventions() {
-        return interventions;
+    public Set<Long> getInterventionsId() {
+        return interventionsId;
     }
 
-    public void setInterventions(Set<InterventionDto> interventions) {
-        this.interventions = interventions;
+    public void setInterventionsId(Set<Long> interventionsId) {
+        this.interventionsId = interventionsId;
     }
 
+   
     
 
    
