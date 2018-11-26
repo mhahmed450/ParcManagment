@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.entity.Office;
+
 import java.util.Set;
 
 
@@ -20,15 +20,15 @@ public class ServiceDto {
     private String name;
     
  
-    private Set<Long> officesId;
+    private Set<OfficeDto> officesDto;
 
     public ServiceDto() {
     }
 
-    public ServiceDto(Long serviceNumber, String name, Set<Long> officesId) {
+    public ServiceDto(Long serviceNumber, String name, Set<OfficeDto> officesDto) {
         this.serviceNumber = serviceNumber;
         this.name = name;
-        this.officesId = officesId;
+        this.officesDto = officesDto;
     }
 
     
@@ -49,12 +49,12 @@ public class ServiceDto {
         this.name = name;
     }
 
-    public Set<Long> getOfficesId() {
-        return officesId;
+    public Set<OfficeDto> getOfficesDto() {
+        return officesDto;
     }
 
-    public void setOfficesId(Set<Long> officesId) {
-        this.officesId = officesId;
+    public void setOfficesId(Set<OfficeDto> officesDto) {
+        this.officesDto = officesDto;
     }
     
     
