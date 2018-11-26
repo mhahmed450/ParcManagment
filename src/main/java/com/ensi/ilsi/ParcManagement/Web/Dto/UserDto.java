@@ -21,7 +21,7 @@ public class UserDto {
     private Long Phone;
    
     
-    private Set<EquipementDto> equipements;
+    private Set<Long> equipementsId;
     
     
 
@@ -29,12 +29,12 @@ public class UserDto {
     }
     
 
-    public UserDto(Long RegNumSt, String name, String Email, Long Phone, Set<EquipementDto> equipements) {
+    public UserDto(Long RegNumSt, String name, String Email, Long Phone, Set<Long> equipementsId) {
         this.RegNumSt = RegNumSt;
         this.name = name;
         this.Email = Email;
         this.Phone = Phone;
-        this.equipements = equipements;
+        this.equipementsId = equipementsId;
     }
     
     
@@ -72,12 +72,12 @@ public class UserDto {
         this.Phone = Phone;
     }
 
-    public Set<EquipementDto> getEquipements() {
-        return equipements;
+    public Set<Long> getEquipementsId() {
+        return equipementsId;
     }
 
-    public void setEquipements(Set<EquipementDto> equipements) {
-        this.equipements = equipements;
+    public void setEquipements(Set<Long> equipementsId) {
+        this.equipementsId = equipementsId;
     }
     
     
