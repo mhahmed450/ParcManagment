@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @Service
-@Transactional
+
 public class IntervenantService {
     
     
@@ -39,7 +39,7 @@ public class IntervenantService {
      }
      
 
-    @Transactional(readOnly = true)
+
     public  Optional<Intervenant> findById(Long id) {
         
        

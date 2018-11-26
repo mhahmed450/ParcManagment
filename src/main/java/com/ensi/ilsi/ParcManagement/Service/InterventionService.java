@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
  * @author nouha
  */
 @Service
-@Transactional
+
 public class InterventionService {
         
     private final InterventionRepository interventionRepository;
@@ -37,17 +37,17 @@ public class InterventionService {
      }
      
 
-    @Transactional(readOnly = true)
+    
     public Optional<Intervention> findById(Long id) {
         return this.interventionRepository.findById(id);
     }
     
-    @Transactional(readOnly = true)
+    
     public Optional<Intervention> findByDate(Date date) {
         return this.interventionRepository.findByDate(date);
     }
     
-    @Transactional(readOnly = true)
+    
     public Optional<Intervention> findByPanne(String panne) {
         return this.interventionRepository.findByPanne(panne);
     }

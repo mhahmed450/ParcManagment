@@ -22,7 +22,7 @@ import java.util.Optional;
  * @author ahmed
  */
 @Service
-@Transactional
+
 public class EquipementService {
 
     
@@ -41,7 +41,7 @@ public class EquipementService {
      }
      
 
-    @Transactional(readOnly = true)
+    
     public  Optional<Equipement> findById(Long id) {
         
        

@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @org.springframework.stereotype.Service
-@Transactional
+
 public class ServiceService {
         
     private final ServiceRepository serviceRepository;
@@ -36,7 +36,7 @@ public class ServiceService {
      }
      
 
-    @Transactional(readOnly = true)
+
     public Optional<Service> findById(Long id) {
          return this.serviceRepository.findById(id);
         

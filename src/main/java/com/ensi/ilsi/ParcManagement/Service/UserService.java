@@ -20,7 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
  */
 
 @Service
-@Transactional
+
 public class UserService {
         
     private final UserRepository userRepository;
@@ -37,7 +37,7 @@ public class UserService {
      }
      
 
-    @Transactional(readOnly = true)
+  
     public Optional<User> findById(Long id) {
         return this.userRepository.findById(id);
         
