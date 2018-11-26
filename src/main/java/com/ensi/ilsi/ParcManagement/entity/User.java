@@ -51,9 +51,9 @@ public class User  {
         this.equipements = equipements;
     }
 
-    
-    
-
+    public Long getId() {
+        return id;
+    }
 
     public String getName() {
         return name;

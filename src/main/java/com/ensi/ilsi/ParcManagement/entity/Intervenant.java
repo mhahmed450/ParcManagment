@@ -44,7 +44,10 @@ public class Intervenant  {
         
     }
 
-
+    public Long getId() {
+        return id;
+    }
+    
     
 
     @Override

@@ -38,19 +38,12 @@ public class Service {
     }
 
     
-
-   
-    
     public Long getServiceNumber() {
         return serviceNumber;
     }
 
     public String getName() {
         return name;
-    }
-
-    public void setServiceNumber(Long ServiceNumber) {
-        this.serviceNumber = ServiceNumber;
     }
 
     public void setName(String name) {

@@ -59,10 +59,6 @@ public class Office  {
         return name;
     }
 
-    public void setOfficeNumber(Long OfficeNumber) {
-        this.officeNumber = OfficeNumber;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
