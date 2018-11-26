@@ -16,12 +16,24 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author ahmed
+ * @author Samar
  */
 
 @Service
 
 public class IntervenantService {
+    
+    public static IntervenantDto mapToDto(Intervenant intervenant) {
+        if (intervenant != null) {
+            return new IntervenantDto(
+                    intervenant.getRegNumInt(),
+                    intervenant.getName(),
+                    intervenant.getEmail(),
+                    intervenant.getPhone(),
+            );
+        }
+        return null;
+    }
     
     
     private final IntervenantRepository intervenantRepository ;

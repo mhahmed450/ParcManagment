@@ -22,6 +22,19 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 
 public class UserService {
+    
+      public static UserDto mapToDto(User user) {
+        if (user != null) {
+            return new UserDto(
+                    user.getId(),
+                   user.getName(),
+                   user.getEmail(),
+                    user.getPhone() , 
+                    
+            );
+        }
+        return null;
+    }
         
     private final UserRepository userRepository;
 

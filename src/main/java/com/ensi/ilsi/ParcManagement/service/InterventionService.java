@@ -17,11 +17,25 @@ import org.springframework.transaction.annotation.Transactional;
 
 /**
  *
- * @author nouha
+ * @author Samar
  */
 @Service
 
 public class InterventionService {
+    
+     public static InterventionDto mapToDto(Intervention intervention) {
+        if (intervention != null) {
+            return new InterventionDto(
+                    intervention.getNumIntervention(),
+                    intervention.getPanne(),
+                    intervention.getDate(),
+                    intervention.getIntervenant().getRegNumInt(),      
+            );
+        }
+        return null;
+    }
+        
+
         
     private final InterventionRepository interventionRepository;
 
