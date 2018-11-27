@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.intervention;
+package com.ensi.ilsi.ParcManagement.intervention.service;
 
 
-import com.ensi.ilsi.ParcManagement.intervention.Intervenant;
+import com.ensi.ilsi.ParcManagement.intervention.web.dto.IntervenantDto;
+import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
 
-import com.ensi.ilsi.ParcManagement.intervention.IntervenantRepository;
-import com.ensi.ilsi.ParcManagement.userEquipement.UserDto;
+import com.ensi.ilsi.ParcManagement.intervention.repository.IntervenantRepository;
+import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;

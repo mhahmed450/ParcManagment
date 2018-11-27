@@ -5,10 +5,10 @@
  */
 package com.ensi.ilsi.ParcManagement.userEquipement.web.dto;
 
-import com.ensi.ilsi.ParcManagement.intervention.Intervention;
-import com.ensi.ilsi.ParcManagement.serviceOffice.Office;
+import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
+import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
-import com.ensi.ilsi.ParcManagement.intervention.InterventionDto;
+import com.ensi.ilsi.ParcManagement.intervention.web.dto.InterventionDto;
 import java.util.Set;
 
 

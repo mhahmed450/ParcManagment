@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.serviceOffice;
+package com.ensi.ilsi.ParcManagement.serviceOffice.entity;
 
-import com.ensi.ilsi.ParcManagement.serviceOffice.Office;
+import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;

@@ -5,12 +5,12 @@
  */
 package com.ensi.ilsi.ParcManagement.userEquipement.service;
 
-import com.ensi.ilsi.ParcManagement.intervention.IntervenantService;
+import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
-import com.ensi.ilsi.ParcManagement.intervention.InterventionService;
-import com.ensi.ilsi.ParcManagement.intervention.InterventionService;
+import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
+import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
 import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.EquipementDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 

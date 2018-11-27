@@ -3,10 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.serviceOffice;
+package com.ensi.ilsi.ParcManagement.serviceOffice.web.dto;
 
 
-import com.ensi.ilsi.ParcManagement.serviceOffice.OfficeDto;
+import com.ensi.ilsi.ParcManagement.serviceOffice.web.dto.OfficeDto;
 import java.util.Set;
 
 

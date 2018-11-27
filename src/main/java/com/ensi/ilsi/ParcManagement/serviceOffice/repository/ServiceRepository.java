@@ -3,11 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.serviceOffice;
+package com.ensi.ilsi.ParcManagement.serviceOffice.repository;
 
-import com.ensi.ilsi.ParcManagement.intervention.Intervenant;
-import com.ensi.ilsi.ParcManagement.intervention.Intervention;
-import com.ensi.ilsi.ParcManagement.serviceOffice.Office;
+
+import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Service;
 import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Repository;
  * @author Administrator
  */
 @Repository
-public interface OfficeRepository extends JpaRepository <Office,Long> {
-    Optional<Office> findById(Long id) ;
+public interface ServiceRepository extends JpaRepository <Service,Long> {
+    Optional<Service> findById(Long id) ;
     
 }

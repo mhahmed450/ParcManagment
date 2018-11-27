@@ -6,7 +6,7 @@
 package com.ensi.ilsi.ParcManagement.userEquipement.entity;
 
 
-import com.ensi.ilsi.ParcManagement.intervention.Intervention;
+import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;
