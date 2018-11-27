@@ -23,12 +23,12 @@ public class InterventionDto {
     
     
     
-    private IntervenantDto intervenantID ;
+    private Long intervenantID ;
 
     public InterventionDto() {
     }
 
-    public InterventionDto(Long numIntervention, String panne, Date date, IntervenantDto intervenantID) {
+    public InterventionDto(Long numIntervention, String panne, Date date, Long intervenantID) {
         this.numIntervention = numIntervention;
         this.panne = panne;
         this.date = date;
@@ -62,11 +62,11 @@ public class InterventionDto {
 
   
 
-    public IntervenantDto getIntervenantID() {
+    public Long getIntervenantID() {
         return intervenantID;
     }
 
-    public void setIntervenantID(IntervenantDto intervenantID) {
+    public void setIntervenantID(Long intervenantID) {
         this.intervenantID = intervenantID;
     }
     

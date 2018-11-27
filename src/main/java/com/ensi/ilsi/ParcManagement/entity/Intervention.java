@@ -26,31 +26,29 @@ public class Intervention  {
     private String panne;
     private Date date;  
     
-    
-    
     @ManyToOne
-    private Intervenant intervenant ;
+    private Long intervenantId ;
 
     public Intervention() {
         //intervention 
     }
 
-    public Intervention( String panne, Date date,Intervenant intervenant) {
+    public Intervention( String panne, Date date,Long intervenant) {
         
         this.panne = panne;
         this.date = date;
 
-        this.intervenant = intervenant;
+        this.intervenantId = intervenant;
     }
 
     
 
-    public Intervenant getIntervenant() {
-        return intervenant;
+    public Long getIntervenant() {
+        return intervenantId;
     }
 
-    public void setIntervenant(Intervenant intervenant) {
-        this.intervenant = intervenant;
+    public void setIntervenant(Long intervenant) {
+        this.intervenantId = intervenant;
     }
 
    

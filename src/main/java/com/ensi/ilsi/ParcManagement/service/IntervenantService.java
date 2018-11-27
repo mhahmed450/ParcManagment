@@ -9,10 +9,16 @@ package com.ensi.ilsi.ParcManagement.service;
 import com.ensi.ilsi.ParcManagement.entity.Intervenant;
 
 import com.ensi.ilsi.ParcManagement.repository.IntervenantRepository;
-import java.util.List;
+import com.ensi.ilsi.ParcManagement.web.dto.IntervenantDto;
+import com.ensi.ilsi.ParcManagement.web.dto.UserDto;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import java.util.List;
+import java.util.stream.Collectors;
 
 /**
  *
@@ -22,14 +28,15 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 
 public class IntervenantService {
+    private final Logger log = LoggerFactory.getLogger(IntervenantService.class);
     
     public static IntervenantDto mapToDto(Intervenant intervenant) {
         if (intervenant != null) {
-            return new IntervenantDto(
-                    intervenant.getRegNumInt(),
+            return new IntervenantDto  (
+                    intervenant.getId(),
                     intervenant.getName(),
                     intervenant.getEmail(),
-                    intervenant.getPhone(),
+                    intervenant.getPhone()
             );
         }
         return null;
@@ -44,36 +51,42 @@ public class IntervenantService {
        
     }
 
-    
-     public List<Intervenant> findAll() {
-         return intervenantRepository.findAll();
-         
+     public List<IntervenantDto> findAll() {
+          log.debug("Request to get all intervenants");
+          
+        return this.intervenantRepository.findAll()
+                .stream()
+                .map(IntervenantService::mapToDto)
+                .collect(Collectors.toList());   
      }
+      
      
-
-
-    public  Optional<Intervenant> findById(Long id) {
+     public IntervenantDto findById(Long id) {
+         
+        log.debug("Request to get Intervenant : {}", id);
+        return this.intervenantRepository.findById(id).map(IntervenantService::mapToDto).orElse(null);
         
-       
-       
-       return this.intervenantRepository.findById(id);
+        
         
     }
-    
-     
-    
-   
 
-    public Intervenant create(Intervenant intervenant){
-   
-        return  this.intervenantRepository.save(intervenant );
+    public IntervenantDto create(IntervenantDto intervenantDto){
+    log.debug("Request to create intervenant : {}", intervenantDto);
+
+        return mapToDto(this.intervenantRepository.save(
+                new Intervenant(intervenantDto.getName(),
+                        intervenantDto.getEmail(),
+                        intervenantDto.getPhone()        
+                )));
+     
         
     }
 
     public void delete(Long id) {
-        
+        log.debug("Request to delete intervenant : {}", id);
         this.intervenantRepository.deleteById(id);
     }
+    
     
     
 }

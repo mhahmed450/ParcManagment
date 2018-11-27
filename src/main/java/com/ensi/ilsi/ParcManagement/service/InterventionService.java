@@ -8,10 +8,14 @@ package com.ensi.ilsi.ParcManagement.service;
 import com.ensi.ilsi.ParcManagement.entity.Intervention;
 
 import com.ensi.ilsi.ParcManagement.repository.InterventionRepository;
+import com.ensi.ilsi.ParcManagement.web.dto.InterventionDto;
 
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +26,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 
 public class InterventionService {
+    private final Logger log = LoggerFactory.getLogger(IntervenantService.class);
     
      public static InterventionDto mapToDto(Intervention intervention) {
         if (intervention != null) {
@@ -29,7 +34,7 @@ public class InterventionService {
                     intervention.getNumIntervention(),
                     intervention.getPanne(),
                     intervention.getDate(),
-                    intervention.getIntervenant().getRegNumInt(),      
+                    intervention.getIntervenant()          
             );
         }
         return null;
@@ -45,34 +50,37 @@ public class InterventionService {
     }
 
     
-     public List<Intervention> findAll() {
-         return interventionRepository.findAll();
-         
+      public List<InterventionDto> findAll() {
+          log.debug("Request to get all interventions");
+          
+        return this.interventionRepository.findAll()
+                .stream()
+                .map(IntervenantService::mapToDto)
+                .collect(Collectors.toList());   
      }
+      
      
+     public InterventionDto findById(Long id) {
+         
+        log.debug("Request to get Intervention : {}", id);
+        return this.interventionRepository.findById(id).map(InterventionService::mapToDto).orElse(null);
+        
+        
+        
+    }
 
-    
-    public Optional<Intervention> findById(Long id) {
-        return this.interventionRepository.findById(id);
-    }
-    
-    
-    public Optional<Intervention> findByDate(Date date) {
-        return this.interventionRepository.findByDate(date);
-    }
-    
-    
-    public Optional<Intervention> findByPanne(String panne) {
-        return this.interventionRepository.findByPanne(panne);
-    }
-    
-    public Intervention create(Intervention intervention){
-    
-        return  this.interventionRepository.save(intervention);
+    public InterventionDto create(InterventionDto interventionDto){
+    log.debug("Request to create intervention : {}", interventionDto);
+
+        return mapToDto(this.interventionRepository.save(
+                new Intervention(interventionDto.getPanne(),
+                        interventionDto.getDate(),
+                        interventionDto.getIntervenantID()
+                )));
     }
 
     public void delete(Long id) {
-        
+        log.debug("Request to delete intervention : {}", id);
         this.interventionRepository.deleteById(id);
     }
 

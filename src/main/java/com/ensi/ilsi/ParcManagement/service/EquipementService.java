@@ -8,13 +8,18 @@ package com.ensi.ilsi.ParcManagement.service;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.ensi.ilsi.ParcManagement.repository.EquipementRepository;
-
+import com.ensi.ilsi.ParcManagement.service.InterventionService;
 
 import com.ensi.ilsi.ParcManagement.entity.Equipement;
+import static com.ensi.ilsi.ParcManagement.service.EquipementService.mapToDto;
 import com.ensi.ilsi.ParcManagement.web.dto.EquipementDto;
+import java.util.Collections;
 
 import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 
 
@@ -25,18 +30,22 @@ import java.util.Optional;
 @Service
 
 public class EquipementService {
+    
+    private final Logger log = LoggerFactory.getLogger(IntervenantService.class);
 
-    /* public static EquipementDto mapToDto(Equipement equipement) {
+     public static EquipementDto mapToDto(Equipement equipement) {
         if (equipement != null) {
             return new EquipementDto(
                     equipement.getId(),
-                    equipement.getOrder().getId(),
-                    CustomerService.mapToDto(cart.getCustomer()),
-                    cart.getStatus().name()
-            );
+                    equipement.getName(),
+                    equipement.getStatus(),
+                    equipement.getInterventions().stream().map(InterventionService : mapToDto).collect(Collectors.toSet())
+                      
+                            );
         }
+       
         return null;
-    }*/
+    }
 
     
     private final EquipementRepository equipementRepository ;
@@ -48,40 +57,38 @@ public class EquipementService {
     }
 
     
-     public List<Equipement> findAll() {
-         return equipementRepository.findAll();
-         
+    public List<EquipementDto> findAll() {
+          log.debug("Request to get all equipements");
+          
+        return this.equipementRepository.findAll()
+                .stream()
+                .map(EquipementService::mapToDto)
+                .collect(Collectors.toList());   
      }
+      
      
-
-    
-    public  Optional<Equipement> findById(Long id) {
+     public EquipementDto findById(Long id) {
+         
+        log.debug("Request to get equipement : {}", id);
+        return this.equipementRepository.findById(id).map(EquipementService::mapToDto).orElse(null);
         
-       
-       
-       return this.equipementRepository.findById(id);
+        
         
     }
-    
-     
-    
-   
 
-    public Equipement create(String name){
-    
-        return  this.equipementRepository.save(
-                new Equipement(
-                        
-                        name,
-                        null,
-                        null
-                ) );
-        
-    
+    public EquipementDto create(EquipementDto equipementDto){
+    log.debug("Request to create equiement : {}", equipementDto);
+
+        return mapToDto(this.equipementRepository.save(
+                new Equipement(equipementDto.getName(),
+                        equipementDto.getStatus(),
+                      
+                         Collections.emptySet()
+                )));
     }
 
     public void delete(Long id) {
-        
+        log.debug("Request to delete equipement : {}", id);
         this.equipementRepository.deleteById(id);
     }
 
