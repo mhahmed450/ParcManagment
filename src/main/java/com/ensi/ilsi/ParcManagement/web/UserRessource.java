@@ -8,6 +8,7 @@ package com.ensi.ilsi.ParcManagement.web;
 
 import com.ensi.ilsi.ParcManagement.entity.User;
 import com.ensi.ilsi.ParcManagement.service.UserService;
+import com.ensi.ilsi.ParcManagement.web.dto.UserDto;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -33,17 +34,17 @@ public class UserRessource {
     }
     
     @GetMapping
-    public List<User> findAll(){
+    public List<UserDto> findAll(){
         return this.userService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<User> getUser(@PathVariable("id") Long  id){
+    public UserDto getUser(@PathVariable("id") Long  id){
         return this.userService.findById(id);
     }
     
     @PostMapping("/{user}")
-    public User addUser(@RequestBody User user){
-        return this.userService.create(user);
+    public UserDto addUser(@RequestBody UserDto userDto){
+        return this.userService.create(userDto);
     }
     
     @DeleteMapping("/{id}")

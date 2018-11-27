@@ -9,6 +9,7 @@ package com.ensi.ilsi.ParcManagement.web;
 import com.ensi.ilsi.ParcManagement.entity.Service;
 
 import com.ensi.ilsi.ParcManagement.service.ServiceService;
+import com.ensi.ilsi.ParcManagement.web.dto.ServiceDto;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -34,17 +35,17 @@ public class ServiceRessource {
     }
     
     @GetMapping
-    public List<Service> findAll(){
+    public List<ServiceDto> findAll(){
         return this.serviceService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<Service> getService(@PathVariable("id") Long  id){
+    public Optional<ServiceDto> getService(@PathVariable("id") Long  id){
         return this.serviceService.findById(id);
     }
     
-    @PostMapping("/{service}")
-    public Service addService(@RequestBody Service service){
-        return this.serviceService.create(service);
+    @PostMapping("/{serviceDto}")
+    public ServiceDto addService(@RequestBody ServiceDto serviceDto){
+        return this.serviceService.create(serviceDto);
     }
     
     @DeleteMapping("/{id}")

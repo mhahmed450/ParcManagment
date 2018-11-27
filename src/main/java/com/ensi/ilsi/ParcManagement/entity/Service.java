@@ -25,7 +25,7 @@ public class Service {
     private Long serviceNumber;
     private String name;
     
-    
+    @OneToMany
     private Set<Office> offices;
    
 
@@ -33,11 +33,12 @@ public class Service {
         //Service
     }
 
-    public Service( String name) {
-        
+    public Service(String name, Set<Office> offices) {
         this.name = name;
-        
+        this.offices = offices;
     }
+
+    
 
     public Set<Office> getOffices() {
         return offices;

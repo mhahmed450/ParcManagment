@@ -9,6 +9,7 @@ package com.ensi.ilsi.ParcManagement.web;
 import com.ensi.ilsi.ParcManagement.entity.Intervention;
 
 import com.ensi.ilsi.ParcManagement.service.InterventionService;
+import com.ensi.ilsi.ParcManagement.web.dto.InterventionDto;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
@@ -38,25 +39,17 @@ public class InterventionRessource {
     }
     
     @GetMapping
-    public List<Intervention> findAll(){
+    public List<InterventionDto> findAll(){
         return this.interventionService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<Intervention> getIntervention(@PathVariable("id") Long  id){
+    public InterventionDto getIntervention(@PathVariable("id") Long  id){
         return this.interventionService.findById(id);
     }
-     @GetMapping("/{date}")
-    public Optional<Intervention> getInterventionByDate(@PathVariable("date") Date date){
-        return this.interventionService.findByDate(date);
-    }
     
-      @GetMapping("/{panne}")
-    public Optional<Intervention> getInterventionByPanne(@PathVariable("panne") String panne){
-        return this.interventionService.findByPanne(panne);
-    }
-    @PostMapping("/{intervention}")
-    public Intervention createIntervention(@RequestBody Intervention intervention){
-        return this.interventionService.create(intervention);
+    @PostMapping("/{interventionDto}")
+    public InterventionDto createIntervention(@RequestBody InterventionDto interventionDto){
+        return this.interventionService.create(interventionDto);
     }
     
     @DeleteMapping("/{id}")

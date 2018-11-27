@@ -26,7 +26,7 @@ public class Intervention  {
     private String panne;
     private Date date;  
     
-    @ManyToOne
+    
     private Long intervenantId ;
 
     public Intervention() {

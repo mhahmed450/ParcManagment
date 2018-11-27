@@ -92,15 +92,18 @@ public class UserService {
                    user.getName(),
                    user.getEmail(),
                     user.getPhone() ,
-                    user.getEquipements().stream().map(EquipementService:mapToDto).collect(Collectors.toSet()) ) ; }
+                    user.getEquipements().stream().map(EquipementService::mapToDto).collect(Collectors.toSet()) ) ;
               
                     
-           
-        
+
+        }
         return null;
-    }
+        
 
 }
+}
+      
+
 
 
 

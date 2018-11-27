@@ -39,7 +39,7 @@ public class EquipementService {
                     equipement.getId(),
                     equipement.getName(),
                     equipement.getStatus(),
-                    equipement.getInterventions().stream().map(InterventionService : mapToDto).collect(Collectors.toSet())
+                    equipement.getInterventions().stream().map(InterventionService::mapToDto).collect(Collectors.toSet()) 
                       
                             );
         }

@@ -82,7 +82,10 @@ public class ServiceService {
         if (service!=null){
             return new ServiceDto(service.getServiceNumber(),
                                     service.getName(),
-                                  service.getOffices().stream().map(ServiceOffice::mapToDto).collect(Collectors.toSet())        }
+                                  service.getOffices().stream().map(OfficeService::mapToDto).collect(Collectors.toSet()) ) ;
+        
+        }
+           return null;
         
     }
 

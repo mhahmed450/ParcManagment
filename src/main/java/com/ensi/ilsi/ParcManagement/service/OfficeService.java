@@ -87,7 +87,7 @@ public class OfficeService {
     
       public static OfficeDto mapToDto(Office office) {
         if (office != null) {
-            return new OfficeDto(office.getName(),office.getEquipements().stream().map(EquipementService::mapToDto).collect(Collectors.toSet()) ;
+            return new OfficeDto(office.getName(),office.getEquipements().stream().map(EquipementService::mapToDto).collect(Collectors.toSet()) ) ;
                       }
               
                     

@@ -7,6 +7,7 @@ package com.ensi.ilsi.ParcManagement.web;
 
 import com.ensi.ilsi.ParcManagement.entity.Equipement;
 import com.ensi.ilsi.ParcManagement.service.EquipementService;
+import com.ensi.ilsi.ParcManagement.web.dto.EquipementDto;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -14,6 +15,7 @@ import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -34,17 +36,17 @@ public class EquipementRessource {
     }
     
     @GetMapping
-    public List<Equipement> findAll(){
+    public List<EquipementDto> findAll(){
         return this.equipementService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<Equipement> getEquipement(@PathVariable("id") Long  id){
+    public EquipementDto getEquipement(@PathVariable("id") Long  id){
         return this.equipementService.findById(id);
     }
     
-    @PostMapping("/{name}")
-    public Equipement createEquipement(@PathVariable("name") String name){
-        return this.equipementService.create(name);
+    @PostMapping("/{equipementDto}")
+    public EquipementDto createEquipement(@RequestBody EquipementDto equipementDto){
+        return this.equipementService.create(equipementDto);
     }
     
     @DeleteMapping("/{id}")

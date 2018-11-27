@@ -8,6 +8,7 @@ package com.ensi.ilsi.ParcManagement.web;
 import com.ensi.ilsi.ParcManagement.entity.Intervenant;
 
 import com.ensi.ilsi.ParcManagement.service.IntervenantService;
+import com.ensi.ilsi.ParcManagement.web.dto.IntervenantDto;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -36,17 +37,17 @@ public class IntervenantRessource {
     }
     
     @GetMapping
-    public List<Intervenant> findAll(){
+    public List<IntervenantDto> findAll(){
         return this.intervenantService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<Intervenant> getIntervenant(@PathVariable("id") Long  id){
+    public IntervenantDto getIntervenant(@PathVariable("id") Long  id){
         return this.intervenantService.findById(id);
     }
     
-    @PostMapping("/{intervenant}")
-    public Intervenant addIntervenant(@RequestBody Intervenant intervenant){
-        return this.intervenantService.create(intervenant);
+    @PostMapping("/{intervenantDto}")
+    public IntervenantDto addIntervenant(@RequestBody IntervenantDto intervenantDto){
+        return this.intervenantService.create(intervenantDto);
     }
     
     @DeleteMapping("/{id}")
