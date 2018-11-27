@@ -79,7 +79,7 @@ public class UserService {
     }
 
     public void delete(Long id) {
-        log.debug("Request to delete Product : {}", id);
+        log.debug("Request to delete User : {}", id);
         this.userRepository.deleteById(id);
     }
     
