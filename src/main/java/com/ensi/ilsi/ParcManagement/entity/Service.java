@@ -25,6 +25,8 @@ public class Service {
     private Long serviceNumber;
     private String name;
     
+    
+    private Set<Office> offices;
    
 
     public Service() {
@@ -35,6 +37,14 @@ public class Service {
         
         this.name = name;
         
+    }
+
+    public Set<Office> getOffices() {
+        return offices;
+    }
+
+    public void setOffices(Set<Office> offices) {
+        this.offices = offices;
     }
 
     
