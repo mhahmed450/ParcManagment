@@ -7,16 +7,14 @@ package com.ensi.ilsi.ParcManagement.service;
 
 
 import com.ensi.ilsi.ParcManagement.entity.Office;
-import com.ensi.ilsi.ParcManagement.entity.User;
-import com.ensi.ilsi.ParcManagement.repository.EquipementRepository;
+
 import com.ensi.ilsi.ParcManagement.repository.OfficeRepository;
 
-import com.ensi.ilsi.ParcManagement.repository.UserRepository;
 import com.ensi.ilsi.ParcManagement.web.dto.OfficeDto;
 import com.ensi.ilsi.ParcManagement.web.dto.UserDto;
 import java.util.Collections;
 import java.util.List;
-import java.util.Optional;
+
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
