@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement;
+package com.ensi.ilsi.ParcManagement.userEquipement.service;
 
 
-import com.ensi.ilsi.ParcManagement.userEquipement.EquipementService;
-import com.ensi.ilsi.ParcManagement.userEquipement.User;
+import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
+import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
+import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
 
 
-import com.ensi.ilsi.ParcManagement.userEquipement.UserRepository;
+import com.ensi.ilsi.ParcManagement.userEquipement.repository.UserRepository;
+import com.ensi.ilsi.ParcManagement.userEquipement.repository.UserRepository;
 import java.util.Collections;
 import java.util.List;
 

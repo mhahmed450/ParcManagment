@@ -3,11 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement;
+package com.ensi.ilsi.ParcManagement.userEquipement.web.dto;
 
 import com.ensi.ilsi.ParcManagement.intervention.Intervention;
 import com.ensi.ilsi.ParcManagement.serviceOffice.Office;
-import com.ensi.ilsi.ParcManagement.userEquipement.User;
+import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
 import com.ensi.ilsi.ParcManagement.intervention.InterventionDto;
 import java.util.Set;
 

@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement;
+package com.ensi.ilsi.ParcManagement.userEquipement.entity;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.Equipement;
+import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;

@@ -3,10 +3,13 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement;
+package com.ensi.ilsi.ParcManagement.userEquipement.web;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.Equipement;
-import com.ensi.ilsi.ParcManagement.userEquipement.EquipementService;
+
+import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
+import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
+import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
+import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -18,42 +21,38 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
 /**
  *
- * @author ahmed
+ * @author nouha
  */
-
 @RestController
-@RequestMapping("/API/equipements")
-public class EquipementRessource {
-    
-    private final EquipementService equipementService;
+@RequestMapping("/API/user")
+public class UserRessource {
+      private final UserService userService;
 
-    public EquipementRessource(EquipementService equipementService) {
-        this.equipementService = equipementService;
+    public UserRessource(UserService userService) {
+        this.userService = userService;
     }
     
     @GetMapping
-    public List<EquipementDto> findAll(){
-        return this.equipementService.findAll();   }
+    public List<UserDto> findAll(){
+        return this.userService.findAll();   }
     
     @GetMapping("/{id}")
-    public EquipementDto getEquipement(@PathVariable("id") Long  id){
-        return this.equipementService.findById(id);
+    public UserDto getUser(@PathVariable("id") Long  id){
+        return this.userService.findById(id);
     }
     
-    @PostMapping("/{equipementDto}")
-    public EquipementDto createEquipement(@RequestBody EquipementDto equipementDto){
-        return this.equipementService.create(equipementDto);
+    @PostMapping("/{user}")
+    public UserDto addUser(@RequestBody UserDto userDto){
+        return this.userService.create(userDto);
     }
     
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        this.equipementService.delete(id);
+        this.userService.delete(id);
         
     }
-    
     
     
 }

@@ -3,17 +3,19 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement;
+package com.ensi.ilsi.ParcManagement.userEquipement.service;
 
 import com.ensi.ilsi.ParcManagement.intervention.IntervenantService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import com.ensi.ilsi.ParcManagement.userEquipement.EquipementRepository;
+import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 import com.ensi.ilsi.ParcManagement.intervention.InterventionService;
 import com.ensi.ilsi.ParcManagement.intervention.InterventionService;
+import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.EquipementDto;
+import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.Equipement;
-import static com.ensi.ilsi.ParcManagement.userEquipement.EquipementService.mapToDto;
+import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
+import static com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService.mapToDto;
 import java.util.Collections;
 
 import java.util.List;
