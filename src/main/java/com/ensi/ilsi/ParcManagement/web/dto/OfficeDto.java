@@ -20,23 +20,30 @@ public class OfficeDto {
     private String name;
     
     
-    private Set<Long> equipementsId;
+    private Set<EquipementDto> equipementsDto;
+
+    public OfficeDto(String name, Set<EquipementDto> equipementsDto) {
+        this.name = name;
+        this.equipementsDto = equipementsDto;
+    }
     
     
-    private Service service ;
+   
 
     public OfficeDto() {
     }
 
+    public Set<EquipementDto> getEquipementsDto() {
+        return equipementsDto;
+    }
+
+    public void setEquipementsDto(Set<EquipementDto> equipementsDto) {
+        this.equipementsDto = equipementsDto;
+    }
+
     
 
-    public OfficeDto(Long officeNumber, String name, Set<Long> equipementsId, Service service) {
-        this.officeNumber = officeNumber;
-        this.name = name;
-        this.equipementsId = equipementsId;
-        this.service = service;
-    }
-    
+  
     
     
 
@@ -56,22 +63,6 @@ public class OfficeDto {
         this.name = name;
     }
 
-    public Set<Long> getEquipementsId() {
-        return equipementsId;
-    }
-
-    public void setEquipements(Set<Long> equipementsId) {
-        this.equipementsId = equipementsId;
-    }
-
-    public Service getService() {
-        return service;
-    }
-
-    public void setService(Service service) {
-        this.service = service;
-    }
-    
     
     
     
