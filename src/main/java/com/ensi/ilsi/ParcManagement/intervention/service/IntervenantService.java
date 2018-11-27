@@ -6,11 +6,11 @@
 package com.ensi.ilsi.ParcManagement.intervention.service;
 
 
-import com.ensi.ilsi.ParcManagement.intervention.web.dto.IntervenantDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.IntervenantDto;
 import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
 
 import com.ensi.ilsi.ParcManagement.intervention.repository.IntervenantRepository;
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
 import java.util.Optional;
 import java.util.stream.Collectors;
 import org.slf4j.Logger;

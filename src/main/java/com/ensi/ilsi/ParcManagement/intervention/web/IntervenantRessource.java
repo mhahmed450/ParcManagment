@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.intervention.web;
 
-import com.ensi.ilsi.ParcManagement.intervention.web.dto.IntervenantDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.IntervenantDto;
 import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
 
 import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;

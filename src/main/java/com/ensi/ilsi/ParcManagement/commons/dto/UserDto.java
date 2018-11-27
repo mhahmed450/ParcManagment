@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement.web.dto;
+package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.EquipementDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
 import java.util.Set;
 

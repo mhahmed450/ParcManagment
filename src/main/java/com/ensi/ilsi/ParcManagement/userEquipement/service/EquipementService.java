@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
 import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.EquipementDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;

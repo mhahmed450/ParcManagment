@@ -5,7 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.userEquipement.web;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.EquipementDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
 import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
 import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;

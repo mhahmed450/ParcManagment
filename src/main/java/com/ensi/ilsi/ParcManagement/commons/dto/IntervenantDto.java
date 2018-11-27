@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.intervention.web.dto;
+package com.ensi.ilsi.ParcManagement.commons.dto;
 
 import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
 import java.util.Set;

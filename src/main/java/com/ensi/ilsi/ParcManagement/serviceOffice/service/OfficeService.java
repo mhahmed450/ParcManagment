@@ -6,13 +6,13 @@
 package com.ensi.ilsi.ParcManagement.serviceOffice.service;
 
 
-import com.ensi.ilsi.ParcManagement.serviceOffice.web.dto.OfficeDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.OfficeDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
 import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
 
 import com.ensi.ilsi.ParcManagement.serviceOffice.repository.OfficeRepository;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
 import java.util.Collections;
 import java.util.List;
 

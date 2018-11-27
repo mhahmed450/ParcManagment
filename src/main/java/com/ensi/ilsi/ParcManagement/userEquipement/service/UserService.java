@@ -6,7 +6,7 @@
 package com.ensi.ilsi.ParcManagement.userEquipement.service;
 
 
-import com.ensi.ilsi.ParcManagement.userEquipement.web.dto.UserDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
 
