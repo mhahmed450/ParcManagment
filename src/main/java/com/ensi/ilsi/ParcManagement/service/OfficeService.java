@@ -38,12 +38,12 @@ public class OfficeService {
     private final Logger log = LoggerFactory.getLogger(OfficeService.class);
 
     private final OfficeRepository officeRepository;
-    private final EquipementRepository equipementRepository;
+    
 
-    public OfficeService(OfficeRepository officeRepository,EquipementRepository equipementRepository)
+    public OfficeService(OfficeRepository officeRepository)
     {
      this.officeRepository=officeRepository;
-     this.equipementRepository=equipementRepository;
+
     }
 
     

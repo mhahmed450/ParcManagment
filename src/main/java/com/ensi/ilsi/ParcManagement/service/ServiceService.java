@@ -29,15 +29,15 @@ import org.springframework.transaction.annotation.Transactional;
 public class ServiceService {
         
     private final ServiceRepository serviceRepository;
-    private final OfficeRepository officeRepository;
+
     
     
     private final Logger log = LoggerFactory.getLogger(ServiceService.class);
 
-    public ServiceService(ServiceRepository serviceRepository ,OfficeRepository officeRepository )
+    public ServiceService(ServiceRepository serviceRepository  )
     {
      this.serviceRepository=serviceRepository;
-     this.officeRepository=officeRepository;
+     
     }
 
     

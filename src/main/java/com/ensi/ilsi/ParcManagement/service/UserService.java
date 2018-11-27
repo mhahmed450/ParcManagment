@@ -35,12 +35,12 @@ public class UserService {
     private final Logger log = LoggerFactory.getLogger(UserService.class);
 
     private final UserRepository userRepository;
-    private final EquipementRepository equipementRepository;
+   
 
-    public UserService(UserRepository userRepository,EquipementRepository equipementRepository)
+    public UserService(UserRepository userRepository)
     {
      this.userRepository=userRepository;
-     this.equipementRepository=equipementRepository;
+
     }
 
     
