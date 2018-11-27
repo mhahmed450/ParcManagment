@@ -55,7 +55,7 @@ public class InterventionService {
           
         return this.interventionRepository.findAll()
                 .stream()
-                .map(IntervenantService::mapToDto)
+                .map(InterventionService::mapToDto)
                 .collect(Collectors.toList());   
      }
       

@@ -66,11 +66,11 @@ public class OfficeService {
         
     }
     
-    public UserDto create(OfficeDto officeDto){
+    public OfficeDto create(OfficeDto officeDto){
     log.debug("Request to create Office : {}", officeDto);
 
         return mapToDto(this.officeRepository.save(
-                new Office(officeDto.getName(),Collections.emptyList()
+                new Office(officeDto.getName(),null
                         
                 )));
      
