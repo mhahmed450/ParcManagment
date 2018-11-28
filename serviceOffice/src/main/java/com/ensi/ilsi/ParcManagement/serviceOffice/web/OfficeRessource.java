@@ -4,15 +4,9 @@
  * and open the template in the editor.
  */
 package com.ensi.ilsi.ParcManagement.serviceOffice.web;
-
-
-import com.ensi.ilsi.ParcManagement.commons.dto.ServiceDto;
-import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Service;
-
-import com.ensi.ilsi.ParcManagement.serviceOffice.service.ServiceService;
+import com.ensi.ilsi.ParcManagement.commons.dto.OfficeDto;
+import com.ensi.ilsi.ParcManagement.serviceOffice.service.OfficeService;
 import java.util.List;
-import java.util.Optional;
-import javax.websocket.server.PathParam;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -26,32 +20,35 @@ import org.springframework.web.bind.annotation.RestController;
  * @author nouha
  */
 @RestController
-@RequestMapping("/API/services")
-public class ServiceRessource {
-     private final ServiceService serviceService;
+@RequestMapping("/API/offices")
+public class OfficeRessource {
+  
+private final OfficeService officeService;
 
-    public ServiceRessource(ServiceService serviceService) {
-        this.serviceService = serviceService;
+    public OfficeRessource(OfficeService officeService) {
+        this.officeService = officeService;
     }
     
     @GetMapping
-    public List<ServiceDto> findAll(){
-        return this.serviceService.findAll();   }
+    public List<OfficeDto> findAll(){
+        return this.officeService.findAll();   }
     
     @GetMapping("/{id}")
-    public Optional<ServiceDto> getService(@PathVariable("id") Long  id){
-        return this.serviceService.findById(id);
+    public OfficeDto getOffice(@PathVariable("id") Long  id){
+        return this.officeService.findById(id);
     }
     
-    @PostMapping("/{serviceDto}")
-    public ServiceDto addService(@RequestBody ServiceDto serviceDto){
-        return this.serviceService.create(serviceDto);
+    @PostMapping("/{officeDto}")
+    public OfficeDto addOffice(@RequestBody OfficeDto officeDto){
+        return this.officeService.create(officeDto);
     }
     
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        this.serviceService.delete(id);
+        this.officeService.delete(id);
         
     }
     
 }
+
+
