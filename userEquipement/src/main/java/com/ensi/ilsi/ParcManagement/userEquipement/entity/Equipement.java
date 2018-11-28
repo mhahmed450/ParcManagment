@@ -32,7 +32,9 @@ public class Equipement {
     private String status;
     
     @ElementCollection
-    private Set<Long> interventionsId ;  
+    private Set<Long> interventionsId ;
+    
+    private Long officeId;
     
    
     
@@ -43,11 +45,12 @@ public class Equipement {
         //Equipement
     }
 
-    public Equipement( String name, String status, Set<Long> interventionsId) {
+    public Equipement( String name, String status, Set<Long> interventionsId,Long officeId) {
       
         this.name = name;
         this.status = status;
         this.interventionsId = interventionsId;
+        this.officeId=officeId;
         
      
     }
@@ -59,26 +62,20 @@ public class Equipement {
     public void setInterventionsId(Set<Long> interventionsId) {
         this.interventionsId = interventionsId;
     }
-    
-    
-    
-    
 
-   
+    public Long getOfficeId() {
+        return officeId;
+    }
 
-    
-    
-    
-
-    @Override
-    public String toString() {
-        return "Equipment{" + "name=" + name + ", status=" + status + '}';
+    public void setOfficeId(Long officeId) {
+        this.officeId = officeId;
     }
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 83 * hash + Objects.hashCode(this.id);
+        hash = 43 * hash + Objects.hashCode(this.name);
+        hash = 43 * hash + Objects.hashCode(this.interventionsId);
         return hash;
     }
 
@@ -94,11 +91,23 @@ public class Equipement {
             return false;
         }
         final Equipement other = (Equipement) obj;
-        if (!Objects.equals(this.id, other.id)) {
+        if (!Objects.equals(this.name, other.name)) {
+            return false;
+        }
+        if (!Objects.equals(this.interventionsId, other.interventionsId)) {
             return false;
         }
         return true;
     }
+
+    @Override
+    public String toString() {
+        return "Equipement{" + "name=" + name + ", status=" + status + ", interventionsId=" + interventionsId + ", officeId=" + officeId + '}';
+    }
+    
+
+
+   
 
     public Long getId() {
         return id;

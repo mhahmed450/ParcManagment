@@ -40,7 +40,8 @@ public class EquipementService {
                     equipement.getId(),
                     equipement.getName(),
                     equipement.getStatus(),
-                    equipement.getInterventionsId()) ; 
+                    equipement.getInterventionsId(),
+                    equipement.getOfficeId()) ; 
                       
                             
         }
@@ -83,8 +84,8 @@ public class EquipementService {
         return mapToDto(this.equipementRepository.save(
                 new Equipement(equipementDto.getName(),
                         equipementDto.getStatus(),
-                      
-                         Collections.emptySet()
+                        Collections.emptySet(),
+                        equipementDto.getOfficeId()
                 )));
     }
 
