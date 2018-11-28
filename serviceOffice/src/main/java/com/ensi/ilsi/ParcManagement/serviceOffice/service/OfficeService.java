@@ -71,7 +71,8 @@ public class OfficeService {
     log.debug("Request to create Office : {}", officeDto);
 
         return mapToDto(this.officeRepository.save(
-                new Office(officeDto.getName(),null
+                new Office(officeDto.getName()
+                       // officeDto.getOfficeNumber()
                         
                 )));
      
@@ -86,8 +87,10 @@ public class OfficeService {
     
       public static OfficeDto mapToDto(Office office) {
         if (office != null) {
-            return new OfficeDto(office.getName(),
-                    office.getEquipementsId() ) ;
+            return new OfficeDto( office.getName(),
+                    office.getOfficeNumber()
+                    
+            ) ;
                       }
               
                     

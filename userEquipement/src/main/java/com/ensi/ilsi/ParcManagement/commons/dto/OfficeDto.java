@@ -18,35 +18,16 @@ public class OfficeDto {
     
     private Long officeNumber;
     private String name;
-    
-    
-    private Set<Long> equipementsId;
 
-    public OfficeDto(String name, Set<Long> equipementsId) {
+    public OfficeDto(String name, Long officeNumber) {
         this.name = name;
-        this.equipementsId = equipementsId;
+        this.officeNumber = officeNumber;
     }
-    
-    
-   
+
 
     public OfficeDto() {
     }
 
-    public Set<Long> getEquipementsId() {
-        return equipementsId;
-    }
-
-    public void setEquipementsId(Set<Long> equipementsId) {
-        this.equipementsId = equipementsId;
-    }
-
-   
-    
-
-  
-    
-    
 
     public Long getOfficeNumber() {
         return officeNumber;
@@ -68,3 +49,5 @@ public class OfficeDto {
     
     
 }
+
+

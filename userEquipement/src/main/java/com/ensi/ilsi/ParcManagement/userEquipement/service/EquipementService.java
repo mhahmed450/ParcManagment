@@ -10,6 +10,8 @@ import org.springframework.stereotype.Service;
 
 
 import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.InterventionDto;
+import com.ensi.ilsi.ParcManagement.commons.dto.OfficeDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
@@ -17,10 +19,13 @@ import static com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementServ
 import java.util.Collections;
 
 import java.util.List;
+import java.util.Set;
 
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.client.RestTemplate;
 
 
 
@@ -33,7 +38,9 @@ import org.slf4j.LoggerFactory;
 public class EquipementService {
     
     private final Logger log = LoggerFactory.getLogger(EquipementService.class);
+    //private final RestTemplate restTemplate;
 
+    private RestTemplate restTemplate;
      public static EquipementDto mapToDto(Equipement equipement) {
         if (equipement != null) {
             return new EquipementDto(
@@ -80,12 +87,34 @@ public class EquipementService {
 
     public EquipementDto create(EquipementDto equipementDto){
     log.debug("Request to create equiement : {}", equipementDto);
+    
+    ResponseEntity <OfficeDto> officeResponseEntity
+                = this.restTemplate.getForEntity(
+                        "localhost:8091/API/Offices/{id}",
+                        OfficeDto.class,
+                        equipementDto.getOfficeId()
+                        
+                );
+    
+   Set <Long> list=null;
+    equipementDto.getInterventionsId().forEach((item) -> {
+        ResponseEntity <InterventionDto> interventionResponseEntity
+                = this.restTemplate.getForEntity(
+                        "localhost:8090/API/Interventions/{id}",
+                        InterventionDto.class,
+                        item
+                        
+                );
+        list.add(interventionResponseEntity.getBody().getNumIntervention());
+        });
 
+    
         return mapToDto(this.equipementRepository.save(
                 new Equipement(equipementDto.getName(),
                         equipementDto.getStatus(),
-                        Collections.emptySet(),
-                        equipementDto.getOfficeId()
+                        //Collections.emptySet(),
+                        list,
+                        officeResponseEntity.getBody().getOfficeNumber()
                 )));
     }
 

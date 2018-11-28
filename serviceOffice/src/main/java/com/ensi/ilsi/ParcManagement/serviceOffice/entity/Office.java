@@ -26,34 +26,24 @@ public class Office  {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long officeNumber;
     private String name;
-    
-    @ElementCollection
-    private Set<Long> equipementsId;
-    
+   
    
     public Office() {
-        //office
+        
     }
 
-    public Office( String name, Set<Long> equipementsId) {
+    public Office( String name) {
        
         this.name = name;
-        this.equipementsId = equipementsId;
+        //this.officeNumber = officeNumber;
       
     }
 
-    public Set<Long> getEquipementsId() {
-        return equipementsId;
+    public void setOfficeNumber(Long officeNumber) {
+        this.officeNumber = officeNumber;
     }
 
-    public void setEquipementsId(Set<Long> equipementsId) {
-        this.equipementsId = equipementsId;
-    }
-
-  
-    
-    
-
+ 
     public Long getOfficeNumber() {
         return officeNumber;
     }

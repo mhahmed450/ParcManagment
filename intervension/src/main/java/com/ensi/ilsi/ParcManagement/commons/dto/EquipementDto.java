@@ -20,16 +20,16 @@ public class EquipementDto {
     private String name;
     private String status;
     private Set<Long> interventionsId ;  
-    
+    private Long officeId;
   
     
 
-    public EquipementDto(Long id, String name, String status, Set<Long> interventionsId) {
+    public EquipementDto(Long id, String name, String status, Set<Long> interventionsId, Long officeId) {
         this.id = id;
         this.name = name;
         this.status = status;
         this.interventionsId= interventionsId;
-     
+        this.officeId=officeId;
       
     }
 
@@ -65,15 +65,12 @@ public class EquipementDto {
         this.interventionsId = interventionsId;
     }
 
-   
+    public Long getOfficeId() {
+        return officeId;
+    }
 
-   
-    
-
-   
-    
-    
-
-    
-    
+    public void setOfficeId(Long officeId) {
+        this.officeId = officeId;
+    }
+ 
 }
