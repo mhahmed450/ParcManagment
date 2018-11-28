@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author nouha
  */
 @RestController
-@RequestMapping("/API/intervention")
+@RequestMapping("/API/interventions")
 public class InterventionRessource {
 
 
