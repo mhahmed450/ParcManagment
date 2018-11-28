@@ -3,13 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.ensi.ilsi.ParcManagement.userEquipement.web;
+package com.ensi.ilsi.ParcManagement.intervention.web;
 
+import com.ensi.ilsi.ParcManagement.commons.dto.IntervenantDto;
+import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
 
-import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
-import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
-import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
+import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
@@ -22,39 +21,42 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+
 /**
  *
  * @author samar
  */
 @CrossOrigin("*")
 @RestController
-@RequestMapping("/API/users")
-public class UserRessource {
-      private final UserService userService;
+@RequestMapping("/API/intervenants")
+public class IntervenantRessource {
+    
+    private final IntervenantService intervenantService;
 
-    public UserRessource(UserService userService) {
-        this.userService = userService;
+    public IntervenantRessource(IntervenantService intervenantService) {
+        this.intervenantService = intervenantService;
     }
     
     @GetMapping
-    public List<UserDto> findAll(){
-        return this.userService.findAll();   }
+    public List<IntervenantDto> findAll(){
+        return this.intervenantService.findAll();   }
     
     @GetMapping("/{id}")
-    public UserDto getUser(@PathVariable("id") Long  id){
-        return this.userService.findById(id);
+    public IntervenantDto getIntervenant(@PathVariable("id") Long  id){
+        return this.intervenantService.findById(id);
     }
     
-    @PostMapping("/{user}")
-    public UserDto addUser(@RequestBody UserDto userDto){
-        return this.userService.create(userDto);
+    @PostMapping("/{intervenantDto}")
+    public IntervenantDto addIntervenant(@RequestBody IntervenantDto intervenantDto){
+        return this.intervenantService.create(intervenantDto);
     }
     
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Long id) {
-        this.userService.delete(id);
+        this.intervenantService.delete(id);
         
     }
+    
     
     
 }

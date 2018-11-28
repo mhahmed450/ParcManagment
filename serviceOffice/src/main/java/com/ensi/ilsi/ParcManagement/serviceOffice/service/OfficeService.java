@@ -44,6 +44,23 @@ public class OfficeService {
      this.officeRepository=officeRepository;
 
     }
+    
+    
+      public static OfficeDto mapToDto(Office office) {
+        if (office != null) {
+            return new OfficeDto( office.getName(),
+                    office.getOfficeNumber()
+                   
+                    
+            ) ;
+             
+                      }
+              
+                    
+           
+        System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
+        return null;
+    }
 
     
      public List<OfficeDto> findAll() {
@@ -69,12 +86,13 @@ public class OfficeService {
     
     public OfficeDto create(OfficeDto officeDto){
     log.debug("Request to create Office : {}", officeDto);
-
+    
         return mapToDto(this.officeRepository.save(
                 new Office(officeDto.getName()
                        // officeDto.getOfficeNumber()
                         
                 )));
+        
      
     }
 
@@ -85,19 +103,6 @@ public class OfficeService {
     
     
     
-      public static OfficeDto mapToDto(Office office) {
-        if (office != null) {
-            return new OfficeDto( office.getName(),
-                    office.getOfficeNumber()
-                    
-            ) ;
-                      }
-              
-                    
-           
-        
-        return null;
-    }
 
 }
 

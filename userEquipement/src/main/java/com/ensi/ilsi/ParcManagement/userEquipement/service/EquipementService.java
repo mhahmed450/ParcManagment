@@ -22,6 +22,7 @@ import java.util.List;
 import java.util.Set;
 
 import java.util.stream.Collectors;
+import javax.transaction.Transactional;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.ResponseEntity;
@@ -31,9 +32,11 @@ import org.springframework.web.client.RestTemplate;
 
 /**
  *
- * @author ahmed
+ * @author samar
  */
+
 @Service
+@Transactional
 
 public class EquipementService {
     
@@ -87,16 +90,20 @@ public class EquipementService {
 
     public EquipementDto create(EquipementDto equipementDto){
     log.debug("Request to create equiement : {}", equipementDto);
+    System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
     
-    ResponseEntity <OfficeDto> officeResponseEntity
+    
+   
+ResponseEntity <OfficeDto> officeResponseEntity
                 = this.restTemplate.getForEntity(
                         "localhost:8091/API/Offices/{id}",
                         OfficeDto.class,
                         equipementDto.getOfficeId()
                         
                 );
+    System.out.println("officeId");
     
-   Set <Long> list=null;
+    Set <Long> list=null;
     equipementDto.getInterventionsId().forEach((item) -> {
         ResponseEntity <InterventionDto> interventionResponseEntity
                 = this.restTemplate.getForEntity(
@@ -107,7 +114,8 @@ public class EquipementService {
                 );
         list.add(interventionResponseEntity.getBody().getNumIntervention());
         });
-
+System.out.println("InterventionId");
+System.out.println(officeResponseEntity.getBody());
     
         return mapToDto(this.equipementRepository.save(
                 new Equipement(equipementDto.getName(),

@@ -28,20 +28,19 @@ public class Office  {
     private String name;
    
    
-    public Office() {
-        
-    }
-
+    
     public Office( String name) {
        
         this.name = name;
         //this.officeNumber = officeNumber;
+        
       
     }
 
-    public void setOfficeNumber(Long officeNumber) {
-        this.officeNumber = officeNumber;
+    public Office() {
+        
     }
+
 
  
     public Long getOfficeNumber() {

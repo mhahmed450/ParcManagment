@@ -12,6 +12,7 @@ import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
 import java.util.List;
 import java.util.Optional;
 import javax.websocket.server.PathParam;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,9 +24,9 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author ahmed
+ * @author samar
  */
-
+@CrossOrigin("*")
 @RestController
 @RequestMapping("/API/equipements")
 public class EquipementRessource {

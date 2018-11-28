@@ -25,7 +25,6 @@ public class OfficeDto {
     public OfficeDto(String name, Long officeNumber) {
         this.name = name;
         this.officeNumber = officeNumber;
-        
     }
     
     
