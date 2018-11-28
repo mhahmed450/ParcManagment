@@ -26,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
  * @author nouha
  */
 @RestController
-@RequestMapping("/API/user")
+@RequestMapping("/API/users")
 public class UserRessource {
       private final UserService userService;
 
