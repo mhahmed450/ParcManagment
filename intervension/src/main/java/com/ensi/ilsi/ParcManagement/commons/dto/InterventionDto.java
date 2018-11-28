@@ -5,10 +5,9 @@
  */
 package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
+
 import java.util.Date;
-import javax.persistence.ManyToOne;
+
 
 /**
  *

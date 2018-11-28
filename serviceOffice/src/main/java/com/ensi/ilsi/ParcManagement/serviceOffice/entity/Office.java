@@ -6,15 +6,15 @@
 package com.ensi.ilsi.ParcManagement.serviceOffice.entity;
 
 
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
+
 import java.util.Objects;
 import java.util.Set;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+
 
 /**
  *
@@ -27,29 +27,31 @@ public class Office  {
     private Long officeNumber;
     private String name;
     
-    @OneToMany
-    private Set<Equipement> equipements;
+    @ElementCollection
+    private Set<Long> equipementsId;
     
    
     public Office() {
         //office
     }
 
-    public Office( String name, Set<Equipement> equipements) {
+    public Office( String name, Set<Long> equipementsId) {
        
         this.name = name;
-        this.equipements = equipements;
+        this.equipementsId = equipementsId;
       
     }
 
-  
-    public Set<Equipement> getEquipements() {
-        return equipements;
+    public Set<Long> getEquipementsId() {
+        return equipementsId;
     }
 
-    public void setEquipements(Set<Equipement> equipements) {
-        this.equipements = equipements;
+    public void setEquipementsId(Set<Long> equipementsId) {
+        this.equipementsId = equipementsId;
     }
+
+  
+    
     
 
     public Long getOfficeNumber() {

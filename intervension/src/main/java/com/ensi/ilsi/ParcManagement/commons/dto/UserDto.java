@@ -5,8 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
+
 import java.util.Set;
 
 

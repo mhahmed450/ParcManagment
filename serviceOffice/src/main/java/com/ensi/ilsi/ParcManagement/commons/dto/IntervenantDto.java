@@ -5,9 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
-import java.util.Set;
-import javax.persistence.OneToMany;
+
 
 /**
  *

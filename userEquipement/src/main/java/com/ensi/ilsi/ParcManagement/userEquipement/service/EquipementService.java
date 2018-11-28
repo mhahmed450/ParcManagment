@@ -5,12 +5,10 @@
  */
 package com.ensi.ilsi.ParcManagement.userEquipement.service;
 
-import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;
+
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
-import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
-import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
-import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
+
+
 import com.ensi.ilsi.ParcManagement.commons.dto.EquipementDto;
 import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementRepository;
 
@@ -19,7 +17,7 @@ import static com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementServ
 import java.util.Collections;
 
 import java.util.List;
-import java.util.Optional;
+
 import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,7 +32,7 @@ import org.slf4j.LoggerFactory;
 
 public class EquipementService {
     
-    private final Logger log = LoggerFactory.getLogger(IntervenantService.class);
+    private final Logger log = LoggerFactory.getLogger(EquipementService.class);
 
      public static EquipementDto mapToDto(Equipement equipement) {
         if (equipement != null) {
@@ -42,9 +40,9 @@ public class EquipementService {
                     equipement.getId(),
                     equipement.getName(),
                     equipement.getStatus(),
-                    equipement.getInterventions().stream().map(InterventionService::mapToDto).collect(Collectors.toSet()) 
+                    equipement.getInterventionsId()) ; 
                       
-                            );
+                            
         }
        
         return null;
@@ -94,6 +92,9 @@ public class EquipementService {
         log.debug("Request to delete equipement : {}", id);
         this.equipementRepository.deleteById(id);
     }
+
+    
+    
 
    
      }

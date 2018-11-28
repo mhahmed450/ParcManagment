@@ -7,13 +7,13 @@ package com.ensi.ilsi.ParcManagement.serviceOffice.service;
 
 
 import com.ensi.ilsi.ParcManagement.commons.dto.OfficeDto;
-import com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService;
+
 import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
 
 import com.ensi.ilsi.ParcManagement.serviceOffice.repository.OfficeRepository;
 
-import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
-import java.util.Collections;
+
+
 import java.util.List;
 
 import java.util.stream.Collectors;
@@ -86,7 +86,8 @@ public class OfficeService {
     
       public static OfficeDto mapToDto(Office office) {
         if (office != null) {
-            return new OfficeDto(office.getName(),office.getEquipements().stream().map(EquipementService::mapToDto).collect(Collectors.toSet()) ) ;
+            return new OfficeDto(office.getName(),
+                    office.getEquipementsId() ) ;
                       }
               
                     

@@ -5,10 +5,8 @@
  */
 package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
-import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
-import com.ensi.ilsi.ParcManagement.commons.dto.InterventionDto;
+
+
 import java.util.Set;
 
 
@@ -21,16 +19,16 @@ public class EquipementDto {
     private Long id;
     private String name;
     private String status;
-    private Set<InterventionDto> interventionsDto ;  
+    private Set<Long> interventionsId ;  
     
   
     
 
-    public EquipementDto(Long id, String name, String status, Set<InterventionDto> interventionsDto) {
+    public EquipementDto(Long id, String name, String status, Set<Long> interventionsId) {
         this.id = id;
         this.name = name;
         this.status = status;
-        this.interventionsDto= interventionsDto;
+        this.interventionsId= interventionsId;
      
       
     }
@@ -59,13 +57,15 @@ public class EquipementDto {
         this.status = status;
     }
 
-    public Set<InterventionDto> getInterventionsDto() {
-        return interventionsDto;
+    public Set<Long> getInterventionsId() {
+        return interventionsId;
     }
 
-    public void setInterventionsDto(Set<InterventionDto> interventionsDto) {
-        this.interventionsDto = interventionsDto;
+    public void setInterventionsId(Set<Long> interventionsId) {
+        this.interventionsId = interventionsId;
     }
+
+   
 
    
     

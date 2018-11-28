@@ -6,15 +6,16 @@
 package com.ensi.ilsi.ParcManagement.userEquipement.entity;
 
 
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
+
 import java.util.Objects;
 import java.util.Set;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
-import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 /**
@@ -30,8 +31,8 @@ public class Equipement {
     private String name;
     private String status;
     
-    @OneToMany
-    private Set<Intervention> interventions ;  
+    @ElementCollection
+    private Set<Long> interventionsId ;  
     
    
     
@@ -42,26 +43,28 @@ public class Equipement {
         //Equipement
     }
 
-    public Equipement( String name, String status, Set<Intervention> interventions) {
+    public Equipement( String name, String status, Set<Long> interventionsId) {
       
         this.name = name;
         this.status = status;
-        this.interventions = interventions;
+        this.interventionsId = interventionsId;
         
      
     }
+
+    public Set<Long> getInterventionsId() {
+        return interventionsId;
+    }
+
+    public void setInterventionsId(Set<Long> interventionsId) {
+        this.interventionsId = interventionsId;
+    }
     
     
     
     
 
-    public Set<Intervention> getInterventions() {
-        return interventions;
-    }
-
-    public void setInterventions(Set<Intervention> interventions) {
-        this.interventions = interventions;
-    }
+   
 
     
     

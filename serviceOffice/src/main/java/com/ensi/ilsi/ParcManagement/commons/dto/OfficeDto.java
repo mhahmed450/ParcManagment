@@ -5,8 +5,7 @@
  */
 package com.ensi.ilsi.ParcManagement.commons.dto;
 
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
-import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Service;
+
 import java.util.Set;
 
 
@@ -20,11 +19,11 @@ public class OfficeDto {
     private String name;
     
     
-    private Set<EquipementDto> equipementsDto;
+    private Set<Long> equipementsId;
 
-    public OfficeDto(String name, Set<EquipementDto> equipementsDto) {
+    public OfficeDto(String name, Set<Long> equipementsId) {
         this.name = name;
-        this.equipementsDto = equipementsDto;
+        this.equipementsId = equipementsId;
     }
     
     
@@ -33,14 +32,15 @@ public class OfficeDto {
     public OfficeDto() {
     }
 
-    public Set<EquipementDto> getEquipementsDto() {
-        return equipementsDto;
+    public Set<Long> getEquipementsId() {
+        return equipementsId;
     }
 
-    public void setEquipementsDto(Set<EquipementDto> equipementsDto) {
-        this.equipementsDto = equipementsDto;
+    public void setEquipementsId(Set<Long> equipementsId) {
+        this.equipementsId = equipementsId;
     }
 
+   
     
 
   
