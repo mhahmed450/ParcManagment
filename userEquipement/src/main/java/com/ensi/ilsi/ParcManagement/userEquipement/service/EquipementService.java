@@ -16,7 +16,9 @@ import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementReposito
 
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
 import static com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService.mapToDto;
+import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 
 import java.util.List;
 import java.util.Set;
@@ -91,31 +93,34 @@ public class EquipementService {
     public EquipementDto create(EquipementDto equipementDto){
     log.debug("Request to create equiement : {}", equipementDto);
     System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaa");
+    System.out.println(equipementDto.getOfficeId());
     
-    
-   
+        RestTemplate r=new RestTemplate();
 ResponseEntity <OfficeDto> officeResponseEntity
-                = this.restTemplate.getForEntity(
-                        "localhost:8091/API/Offices/{id}",
+                = r.getForEntity(
+                        "http://localhost:8091/API/offices/{id}",
                         OfficeDto.class,
                         equipementDto.getOfficeId()
                         
                 );
     System.out.println("officeId");
+    RestTemplate r1=new RestTemplate();
     
-    Set <Long> list=null;
-    equipementDto.getInterventionsId().forEach((item) -> {
-        ResponseEntity <InterventionDto> interventionResponseEntity
-                = this.restTemplate.getForEntity(
-                        "localhost:8090/API/Interventions/{id}",
-                        InterventionDto.class,
-                        item
-                        
-                );
+    Set<Long> list = new HashSet<>();
+    equipementDto.getInterventionsId().forEach((Long item) -> {
+        ResponseEntity <InterventionDto> interventionResponseEntity;
+        
+        interventionResponseEntity = r1.getForEntity(
+                "http://localhost:8090/API/interventions/{id}",
+                InterventionDto.class,
+                item
+                
+        );
+        System.out.println(interventionResponseEntity.getBody().getNumIntervention());
         list.add(interventionResponseEntity.getBody().getNumIntervention());
         });
 System.out.println("InterventionId");
-System.out.println(officeResponseEntity.getBody());
+
     
         return mapToDto(this.equipementRepository.save(
                 new Equipement(equipementDto.getName(),

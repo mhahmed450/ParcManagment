@@ -7,7 +7,7 @@ package com.ensi.ilsi.ParcManagement.serviceOffice.service;
 
 
 import com.ensi.ilsi.ParcManagement.commons.dto.ServiceDto;
-import com.ensi.ilsi.ParcManagement.serviceOffice.service.OfficeService;
+
 import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Service;
 
 

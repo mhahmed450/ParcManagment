@@ -1,0 +1,13 @@
+server:
+    port: 8222
+zuul:
+  routes:
+    serviceOffice:
+      path: /serviceOffice/**
+      serviceId: serviceOffice-service
+    intervention:
+      path: /intervention/**
+      serviceId: intervention-service
+    userEquipement:
+      path: /userEquipement/**
+      serviceId: userEquipement-service
