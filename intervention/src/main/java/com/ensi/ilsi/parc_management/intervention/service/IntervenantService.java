@@ -1,0 +1,87 @@
+
+package com.ensi.ilsi.parc_management.intervention.service;
+
+
+import com.ensi.ilsi.parc_management.commons.dto.IntervenantDto;
+import com.ensi.ilsi.parc_management.intervention.entity.Intervenant;
+import com.ensi.ilsi.parc_management.intervention.repository.IntervenantRepository;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ *
+ * @author Samar
+ */
+
+@Service
+
+public class IntervenantService {
+    private final Logger log = LoggerFactory.getLogger(IntervenantService.class);
+    
+    public static IntervenantDto mapToDto(Intervenant intervenant) {
+        if (intervenant != null) {
+            return new IntervenantDto  (
+                    intervenant.getId(),
+                    intervenant.getName(),
+                    intervenant.getEmail(),
+                    intervenant.getPhone()
+            );
+        }
+        return null;
+    }
+    
+    
+    
+    
+    private final IntervenantRepository intervenantRepository ;
+  
+
+    public IntervenantService(IntervenantRepository intervenantRepository) {
+        this.intervenantRepository = intervenantRepository;
+       
+    }
+
+     public List<IntervenantDto> findAll() {
+          log.debug("Request to get all intervenants");
+          
+        return this.intervenantRepository.findAll()
+                .stream()
+                .map(IntervenantService::mapToDto)
+                .collect(Collectors.toList());   
+     }
+      
+     
+     public IntervenantDto findById(Long id) {
+         
+        log.debug("Request to get Intervenant : {}", id);
+        return this.intervenantRepository.findById(id).map(IntervenantService::mapToDto).orElse(null);
+        
+        
+        
+    }
+
+    public IntervenantDto create(IntervenantDto intervenantDto){
+    log.debug("Request to create intervenant : {}", intervenantDto);
+
+        return mapToDto(this.intervenantRepository.save(
+                new Intervenant(intervenantDto.getName(),
+                        intervenantDto.getEmail(),
+                        intervenantDto.getPhone()        
+                )));
+     
+        
+    }
+
+    public void delete(Long id) {
+        log.debug("Request to delete intervenant : {}", id);
+        this.intervenantRepository.deleteById(id);
+    }
+    
+    
+    
+}
