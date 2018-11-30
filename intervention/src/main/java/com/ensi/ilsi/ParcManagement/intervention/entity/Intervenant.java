@@ -34,6 +34,7 @@ public class Intervenant implements Serializable  {
     
     public Intervenant() {
         //Intervenant
+        
     }
     
 

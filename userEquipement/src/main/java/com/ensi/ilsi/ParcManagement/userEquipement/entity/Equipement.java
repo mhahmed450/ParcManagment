@@ -44,6 +44,7 @@ public class Equipement implements Serializable {
     
     public Equipement() {
         //Equipement
+        
     }
 
     public Equipement( String name, String status, Set<Long> interventionsId,Long officeId) {

@@ -32,6 +32,7 @@ public class Intervention implements Serializable  {
 
     public Intervention() {
         //intervention 
+        
     }
 
     public Intervention( String panne, Date date,Long intervenant) {

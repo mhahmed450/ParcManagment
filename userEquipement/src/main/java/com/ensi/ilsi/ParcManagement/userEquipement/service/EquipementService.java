@@ -44,6 +44,7 @@ public class EquipementService {
     private final Logger log = LoggerFactory.getLogger(EquipementService.class);
     //private final RestTemplate restTemplate;
 
+    
     private RestTemplate restTemplate;
      public static EquipementDto mapToDto(Equipement equipement) {
         if (equipement != null) {

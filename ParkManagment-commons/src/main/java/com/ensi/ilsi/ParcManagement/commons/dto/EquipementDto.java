@@ -16,11 +16,16 @@ import java.util.Set;
  */
 public class EquipementDto {
     
+    
     private Long id;
     private String name;
     private String status;
     private Set<Long> interventionsId ;  
     private Long officeId;
+
+    public EquipementDto() {
+        //
+    }
   
     
 

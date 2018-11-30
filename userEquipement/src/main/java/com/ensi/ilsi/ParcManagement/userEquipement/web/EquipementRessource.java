@@ -29,6 +29,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/API/equipements")
 public class EquipementRessource {
     
+    
     private final EquipementService equipementService;
 
     public EquipementRessource(EquipementService equipementService) {

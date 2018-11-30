@@ -15,6 +15,7 @@ import java.util.Date;
  */
 public class InterventionDto {
     
+    
     private Long numIntervention;
     private String panne;
     private Date date;  
@@ -25,6 +26,7 @@ public class InterventionDto {
     private Long intervenantID ;
 
     public InterventionDto() {
+        //
     }
 
     public InterventionDto(Long numIntervention, String panne, Date date, Long intervenantID) {

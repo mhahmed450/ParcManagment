@@ -17,6 +17,8 @@ import org.springframework.stereotype.Repository;
  */
 @Repository
 public interface OfficeRepository extends JpaRepository <Office,Long> {
+    
+    
     @Override
     Optional<Office> findById(Long id);
     

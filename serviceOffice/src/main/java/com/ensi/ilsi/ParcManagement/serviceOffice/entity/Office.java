@@ -39,6 +39,8 @@ public class Office implements Serializable  {
 
     public Office() {
         
+        // Office
+        
     }
 
 

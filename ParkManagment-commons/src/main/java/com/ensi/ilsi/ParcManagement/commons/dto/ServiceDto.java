@@ -24,6 +24,7 @@ public class ServiceDto {
     private Set<OfficeDto> officesDto;
 
     public ServiceDto() {
+        //
     }
 
     public ServiceDto(Long serviceNumber, String name, Set<OfficeDto> officesDto) {

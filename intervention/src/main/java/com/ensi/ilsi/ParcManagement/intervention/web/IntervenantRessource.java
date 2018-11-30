@@ -30,6 +30,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/API/intervenants")
 public class IntervenantRessource {
     
+    
     private final IntervenantService intervenantService;
 
     public IntervenantRessource(IntervenantService intervenantService) {

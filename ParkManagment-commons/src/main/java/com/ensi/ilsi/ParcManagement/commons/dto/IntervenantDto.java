@@ -13,6 +13,7 @@ package com.ensi.ilsi.ParcManagement.commons.dto;
  */
 public class IntervenantDto {
     
+    
     private Long regNumInt;
     private String name;
     private String email;
@@ -22,6 +23,7 @@ public class IntervenantDto {
 
     
     public IntervenantDto() {
+        //
     }
 
     public IntervenantDto(Long regNumInt, String name, String email, Long phone) {

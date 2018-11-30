@@ -33,6 +33,7 @@ public class User implements Serializable  {
 
     public User() {
         //User
+        
     }
 
     public User(String name, String email, Long phone, Set<Equipement> equipements) {

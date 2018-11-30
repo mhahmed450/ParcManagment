@@ -32,7 +32,7 @@ public class Service implements Serializable {
    
 
     public Service() {
-        //Service
+        //service
     }
 
     public Service(String name, Set<Office> offices) {

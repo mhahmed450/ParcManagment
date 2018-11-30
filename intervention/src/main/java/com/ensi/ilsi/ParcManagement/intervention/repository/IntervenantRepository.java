@@ -19,7 +19,8 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface IntervenantRepository extends JpaRepository <Intervenant,Long> {
     
-    Optional<Intervenant> findById(Long id) ;
+    @Override
+    Optional<Intervenant> findById(Long id);
     
     
     
