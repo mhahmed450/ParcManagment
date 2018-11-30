@@ -13,10 +13,11 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Repository
 public interface ServiceRepository extends JpaRepository <Service,Long> {
-    Optional<Service> findById(Long id) ;
+    @Override
+    Optional<Service> findById(Long id);
     
 }

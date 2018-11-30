@@ -5,7 +5,8 @@
  */
 package com.ensi.ilsi.ParcManagement.serviceOffice.entity;
 
-import com.ensi.ilsi.ParcManagement.serviceOffice.entity.Office;
+
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.Entity;
@@ -19,7 +20,7 @@ import javax.persistence.OneToMany;
  * @author Ahmed
  */
 @Entity
-public class Service {
+public class Service implements Serializable {
     
      @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

@@ -10,13 +10,11 @@ import com.ensi.ilsi.ParcManagement.commons.dto.IntervenantDto;
 import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
 
 import com.ensi.ilsi.ParcManagement.intervention.repository.IntervenantRepository;
-import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
-import java.util.Optional;
-import java.util.stream.Collectors;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
+
 import java.util.List;
 import java.util.stream.Collectors;
 

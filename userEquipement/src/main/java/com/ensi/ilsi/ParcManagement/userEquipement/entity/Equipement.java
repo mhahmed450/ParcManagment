@@ -7,6 +7,7 @@ package com.ensi.ilsi.ParcManagement.userEquipement.entity;
 
 
 
+import java.io.Serializable;
 import java.util.Objects;
 import java.util.Set;
 import javax.persistence.ElementCollection;
@@ -24,7 +25,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "Equipement")
-public class Equipement {
+public class Equipement implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;

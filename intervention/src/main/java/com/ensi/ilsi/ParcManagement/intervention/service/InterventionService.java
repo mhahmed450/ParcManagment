@@ -6,7 +6,7 @@
 package com.ensi.ilsi.ParcManagement.intervention.service;
 
 import com.ensi.ilsi.ParcManagement.commons.dto.InterventionDto;
-import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;
+
 import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
 
 import com.ensi.ilsi.ParcManagement.intervention.repository.InterventionRepository;
@@ -22,7 +22,7 @@ import org.springframework.stereotype.Service;
 
 /**
  *
- * @author Samar
+ * @author Ahmed
  */
 @Service
 

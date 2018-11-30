@@ -16,8 +16,7 @@ import com.ensi.ilsi.ParcManagement.userEquipement.repository.EquipementReposito
 
 import com.ensi.ilsi.ParcManagement.userEquipement.entity.Equipement;
 import static com.ensi.ilsi.ParcManagement.userEquipement.service.EquipementService.mapToDto;
-import java.util.ArrayList;
-import java.util.Collections;
+
 import java.util.HashSet;
 
 import java.util.List;

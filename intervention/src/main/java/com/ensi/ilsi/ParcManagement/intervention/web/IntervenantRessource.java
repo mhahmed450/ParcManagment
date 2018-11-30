@@ -6,12 +6,11 @@
 package com.ensi.ilsi.ParcManagement.intervention.web;
 
 import com.ensi.ilsi.ParcManagement.commons.dto.IntervenantDto;
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervenant;
+
 
 import com.ensi.ilsi.ParcManagement.intervention.service.IntervenantService;
 import java.util.List;
-import java.util.Optional;
-import javax.websocket.server.PathParam;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +23,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 /**
  *
- * @author samar
+ * @author Ahmed
  */
 @CrossOrigin("*")
 @RestController

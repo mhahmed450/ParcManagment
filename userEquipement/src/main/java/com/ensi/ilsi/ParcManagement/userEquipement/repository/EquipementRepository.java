@@ -13,10 +13,11 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Repository
 public interface EquipementRepository extends JpaRepository <Equipement,Long> {
+    @Override
     Optional<Equipement> findById(Long id);
 
 }

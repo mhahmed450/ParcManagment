@@ -6,20 +6,21 @@
 package com.ensi.ilsi.ParcManagement.intervention.entity;
 
 
+import java.io.Serializable;
 import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+
 
 /**
  *
  * @author Ahmed
  */
 @Entity
-public class Intervention  {
+public class Intervention implements Serializable  {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long numIntervention;

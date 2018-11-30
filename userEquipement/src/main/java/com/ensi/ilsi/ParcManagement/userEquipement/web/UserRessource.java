@@ -7,12 +7,10 @@ package com.ensi.ilsi.ParcManagement.userEquipement.web;
 
 
 import com.ensi.ilsi.ParcManagement.commons.dto.UserDto;
-import com.ensi.ilsi.ParcManagement.userEquipement.entity.User;
-import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
+
 import com.ensi.ilsi.ParcManagement.userEquipement.service.UserService;
 import java.util.List;
-import java.util.Optional;
-import javax.websocket.server.PathParam;
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

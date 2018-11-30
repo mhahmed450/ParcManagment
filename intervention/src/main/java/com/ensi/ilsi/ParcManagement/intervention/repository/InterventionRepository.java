@@ -15,7 +15,7 @@ import org.springframework.stereotype.Repository;
 
 /**
  *
- * @author Administrator
+ * @author Ahmed
  */
 @Repository
 public interface InterventionRepository extends JpaRepository <Intervention,Long> {

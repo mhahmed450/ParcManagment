@@ -7,13 +7,13 @@ package com.ensi.ilsi.ParcManagement.intervention.web;
 
 
 import com.ensi.ilsi.ParcManagement.commons.dto.InterventionDto;
-import com.ensi.ilsi.ParcManagement.intervention.entity.Intervention;
+
 
 import com.ensi.ilsi.ParcManagement.intervention.service.InterventionService;
-import java.util.Date;
+
 import java.util.List;
-import java.util.Optional;
-import javax.websocket.server.PathParam;
+
+
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
