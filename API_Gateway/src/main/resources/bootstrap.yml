@@ -20,9 +20,9 @@ management:
         include: '*'
 zuul:
   routes:
-    userEquipement:
+    userEquipement-service:
       path: /userEquipement/**
-    intervention:
+    intervention-service:
       path: /intervention/**
-    serviceOffice:
+    serviceOffice-service:
       path: /serviceOffice/**
