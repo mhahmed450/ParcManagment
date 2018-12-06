@@ -92,7 +92,7 @@ public class EquipementService {
         RestTemplate r=new RestTemplate();
 ResponseEntity <OfficeDto> officeResponseEntity
                 = r.getForEntity(
-                        "http://localhost:8091/API/offices/{id}",
+                        "http://localhost:9991/API/offices/{id}",
                         OfficeDto.class,
                         equipementDto.getOfficeId()
                         
@@ -105,7 +105,7 @@ ResponseEntity <OfficeDto> officeResponseEntity
         ResponseEntity <InterventionDto> interventionResponseEntity;
         
         interventionResponseEntity = r1.getForEntity(
-                "http://localhost:8090/API/interventions/{id}",
+                "http://localhost:9990/API/interventions/{id}",
                 InterventionDto.class,
                 item
                 
